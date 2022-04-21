@@ -18,3 +18,11 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Home');
 });
+
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard/Dashboard');
+});
+
+Route::get('/dashboardss', function () {
+    return view('dashboard.master');
+});
