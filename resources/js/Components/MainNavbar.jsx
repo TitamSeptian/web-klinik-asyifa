@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "@/src/logo.svg";
 import Button from "@/Components/Button";
 import { InertiaLink } from "@inertiajs/inertia-react";
+import { FaAngleDown } from "react-icons/fa";
 
 const MainNavbar = ({ justSticky }) => {
     const listenScrollEvent = () => {
@@ -22,8 +23,8 @@ const MainNavbar = ({ justSticky }) => {
         <nav
             className={`${display} top-0 z-30 ${bg} h-[80px] w-full px-24 overflow-hidden flex items-center justify-between transition-all duration-300 ease-in-out`}
         >
-            <div className="flex gap-x-2 items-center">
-                <img src={logo} alt="logo" />
+            <div className="flex gap-x-5 items-center">
+                <img src={logo} alt="logo" className="w-24 h-8" />
                 <ul className="flex gap-x-5 font-semibold">
                     <li>
                         <InertiaLink href={route("home")}>Home</InertiaLink>
@@ -32,7 +33,16 @@ const MainNavbar = ({ justSticky }) => {
                         <InertiaLink href={route("about")}>About</InertiaLink>
                     </li>
                     <li>
-                        <InertiaLink href="/">Services</InertiaLink>
+                        <InertiaLink href="/">
+                            Services{" "}
+                            <FaAngleDown
+                                className="inline"
+                                style={{
+                                    width: "inherit",
+                                    height: "inherit",
+                                }}
+                            />{" "}
+                        </InertiaLink>
                     </li>
                     <li>
                         <InertiaLink href={route("articles")}>

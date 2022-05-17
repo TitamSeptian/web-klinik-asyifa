@@ -822,6 +822,14 @@ select {
   margin-left: auto;
   margin-right: auto;
 }
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -879,6 +887,9 @@ select {
 .block {
   display: block;
 }
+.inline {
+  display: inline;
+}
 .flex {
   display: flex;
 }
@@ -893,6 +904,9 @@ select {
 }
 .aspect-\[16\/9\] {
   aspect-ratio: 16 / 9;
+}
+.aspect-\[4\/3\] {
+  aspect-ratio: 4 / 3;
 }
 .h-5 {
   height: 1.25rem;
@@ -926,6 +940,9 @@ select {
 }
 .h-1 {
   height: 0.25rem;
+}
+.h-\[240px\] {
+  height: 240px;
 }
 .max-h-screen {
   max-height: 100vh;
@@ -975,6 +992,12 @@ select {
 .w-2 {
   width: 0.5rem;
 }
+.w-\[360px\] {
+  width: 360px;
+}
+.w-24 {
+  width: 6rem;
+}
 .max-w-full {
   max-width: 100%;
 }
@@ -995,6 +1018,9 @@ select {
 }
 .max-w-\[384px\] {
   max-width: 384px;
+}
+.max-w-\[768px\] {
+  max-width: 768px;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -1077,6 +1103,12 @@ select {
 .gap-5 {
   gap: 1.25rem;
 }
+.gap-3 {
+  gap: 0.75rem;
+}
+.gap-8 {
+  gap: 2rem;
+}
 .gap-x-10 {
   -moz-column-gap: 2.5rem;
        column-gap: 2.5rem;
@@ -1115,6 +1147,9 @@ select {
 .gap-y-3 {
   row-gap: 0.75rem;
 }
+.gap-y-8 {
+  row-gap: 2rem;
+}
 .space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1143,8 +1178,14 @@ select {
 .self-start {
   align-self: flex-start;
 }
+.self-center {
+  align-self: center;
+}
 .justify-self-start {
   justify-self: start;
+}
+.justify-self-center {
+  justify-self: center;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -1278,6 +1319,10 @@ select {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.object-fill {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
 .p-6 {
   padding: 1.5rem;
 }
@@ -1295,6 +1340,9 @@ select {
 }
 .p-7 {
   padding: 1.75rem;
+}
+.p-1 {
+  padding: 0.25rem;
 }
 .px-4 {
   padding-left: 1rem;
@@ -1848,6 +1896,10 @@ select {
 
   .lg\:w-\[400px\] {
     width: 400px;
+  }
+
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .lg\:px-14 {

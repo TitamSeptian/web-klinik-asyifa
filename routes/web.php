@@ -26,6 +26,10 @@ Route::get('/articles', function () {
     return Inertia::render('Landing/Articles');
 })->name('articles');
 
+Route::get('/blog', function () {
+    return Inertia::render('Landing/Blog');
+})->name('blog');
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard/Dashboard');
 });
