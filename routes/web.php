@@ -17,7 +17,14 @@ use Inertia\Inertia;
 
 Route::get('/', function () {
     return Inertia::render('Landing/Landing');
-});
+})->name('home');;
+Route::get('/about', function () {
+    return Inertia::render('Landing/About');
+})->name('about');
+
+Route::get('/articles', function () {
+    return Inertia::render('Landing/Articles');
+})->name('articles');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard/Dashboard');

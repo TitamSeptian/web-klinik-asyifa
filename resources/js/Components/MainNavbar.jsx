@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
 import logo from "@/src/logo.svg";
 import Button from "@/Components/Button";
+import { InertiaLink } from "@inertiajs/inertia-react";
 
-const MainNavbar = () => {
+const MainNavbar = ({ justSticky }) => {
     const listenScrollEvent = () => {
         window.scrollY > 10 ? setBg("bg-white") : setBg("bg-transparent");
-        window.scrollY > 10 ? setDisplay("sticky") : setDisplay("absolute");
+        window.scrollY > 10
+            ? setDisplay("sticky")
+            : setDisplay(justSticky ? "sticky" : "absolute");
     };
     const [bg, setBg] = useState("bg-transparent");
-    const [display, setDisplay] = useState("absolute");
+    const [display, setDisplay] = useState(justSticky ? "sticky" : "absolute");
     useEffect(() => {
         window.addEventListener("scroll", listenScrollEvent);
         return () => {
@@ -22,10 +25,20 @@ const MainNavbar = () => {
             <div className="flex gap-x-2 items-center">
                 <img src={logo} alt="logo" />
                 <ul className="flex gap-x-5 font-semibold">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Articles</li>
+                    <li>
+                        <InertiaLink href={route("home")}>Home</InertiaLink>
+                    </li>
+                    <li>
+                        <InertiaLink href={route("about")}>About</InertiaLink>
+                    </li>
+                    <li>
+                        <InertiaLink href="/">Services</InertiaLink>
+                    </li>
+                    <li>
+                        <InertiaLink href={route("articles")}>
+                            Articles
+                        </InertiaLink>
+                    </li>
                 </ul>
             </div>
             <div className="flex gap-x-2 items-center">
