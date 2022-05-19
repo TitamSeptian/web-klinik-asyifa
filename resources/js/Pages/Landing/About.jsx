@@ -3,14 +3,28 @@ import Navbar from "../../Components/MainNavbar";
 import Footer from "../../Components/Footer";
 import ServiceItem from "../../Components/ServiceItem";
 import people from "@/src/people.png";
+import img1 from "@/src/about/1.png";
+import img2 from "@/src/about/2.png";
+import img3 from "@/src/about/3.png";
+import img4 from "@/src/about/4.png";
+import img5 from "@/src/about/5.png";
+import img6 from "@/src/about/6.png";
+import img7 from "@/src/about/7.png";
+import img8 from "@/src/about/8.png";
+import img9 from "@/src/about/9.png";
+import img10 from "@/src/about/10.png";
+import { Head } from "@inertiajs/inertia-react";
 
 const About = () => {
     return (
         <>
+            <Head>
+                <title>Klinik Asyifa Mariuk About</title>
+            </Head>
             <Navbar justSticky={true} />
             <section className="px-24 mt-20">
                 <div className="flex flex-col gap-y-10 justify-center items-center">
-                    <h1 className="text-6xl text-center  font-bold">
+                    <h1 className="text-6xl text-center font-bold">
                         Klinik Asyifaa Mariuk Providing{" "}
                         <span className="text-thePrimary underline underline-offset-2">
                             Best and Affordable
@@ -25,13 +39,23 @@ const About = () => {
                 </div>
             </section>
             <section className="px-10 mt-16">
-                <div className="grid overflow-hidden sm:grid-cols-5 grid-cols-3 sm:grid-rows-2 grid-rows-3 gap-1">
-                    <div className="bg-sky-400 row-span-3">1</div>
-                    <div className="bg-sky-400 col-span-2">2</div>
-                    <div className="bg-sky-400">3</div>
-                    <div className="bg-sky-400 row-span-3">4</div>
-                    <div className="bg-sky-400">5</div>
-                    <div className="bg-sky-400 col-span-2">6</div>
+                <div className="flex flex-row justify-between max-w-6xl m-auto space-x-2">
+                    <div className="flex flex-col justify-center items-center">
+                        <img src={img1} alt="" className="rounded-lg " />
+                    </div>
+                    <div className="flex flex-col space-y-2">
+                        <div className="flex flex-row space-x-2 justify-end items-end">
+                            <img src={img2} alt="" className="rounded-lg " />
+                            <img src={img3} alt="" className="rounded-lg " />
+                        </div>
+                        <div className="flex flex-row space-x-2 justify-start items-start">
+                            <img src={img5} alt="" className="rounded-lg " />
+                            <img src={img6} alt="" className="rounded-lg " />
+                        </div>
+                    </div>
+                    <div className="flex flex-col justify-center items-center">
+                        <img src={img4} alt="" className="rounded-lg " />
+                    </div>
                 </div>
             </section>
             <section className="px-24 mt-20">
@@ -57,7 +81,7 @@ const About = () => {
             <section className="px-24 mt-20 bg-gray-50">
                 <div className="flex flex-wrap py-10">
                     <div className="w-1/2 flex flex-col gap-y-6">
-                        <h1 className="text-6xl text-bold">
+                        <h1 className="text-6xl font-bold">
                             <span className="text-thePrimary">
                                 Best and Affordable
                             </span>{" "}
@@ -77,12 +101,38 @@ const About = () => {
                         </p>
                     </div>
                     <div className="w-1/2 flex justify-center items-center">
-                        <div className="grid overflow-hidden grid-lines grid-cols-2 grid-rows-2 gap-2">
-                            <div className="bg-sky-500">1</div>
-                            <div className="bg-sky-500 row-span-2">2</div>
-                            <div className="bg-sky-500 row-span-2">3</div>
-                            <div className="bg-sky-500">4</div>
+                        <div className="flex flex-row justify-between max-w-md gap-2">
+                            <div className="flex flex-col justify-start items-start gap-2">
+                                <img src={img7} alt="" className="rounded-lg" />
+                                <img src={img9} alt="" className="rounded-lg" />
+                            </div>
+                            <div className="flex flex-col justify-start items-start gap-2">
+                                <img src={img8} alt="" className="rounded-lg" />
+                                <img
+                                    src={img10}
+                                    alt=""
+                                    className="rounded-lg"
+                                />
+                            </div>
                         </div>
+                        {/* <div className="grid overflow-hidden grid-lines grid-cols-2 grid-rows-2 gap-2">
+                            <div className="bg-sky-500">
+                                <img src={img7} alt="" className="rounded-lg" />
+                            </div>
+                            <div className="bg-sky-500 row-span-2 place-self-center">
+                                <img src={img8} alt="" className="rounded-lg" />
+                            </div>
+                            <div className="bg-sky-500 row-span-2">
+                                <img src={img9} alt="" className="rounded-lg" />
+                            </div>
+                            <div className="bg-sky-500">
+                                <img
+                                    src={img10}
+                                    alt=""
+                                    className="rounded-lg place-self-start"
+                                />
+                            </div>
+                        </div> */}
                     </div>
                 </div>
             </section>

@@ -6,8 +6,8 @@ import { FaAngleDown } from "react-icons/fa";
 
 const MainNavbar = ({ justSticky }) => {
     const listenScrollEvent = () => {
-        window.scrollY > 10 ? setBg("bg-white") : setBg("bg-transparent");
-        window.scrollY > 10
+        window.scrollY > 100 ? setBg("bg-white") : setBg("bg-transparent");
+        window.scrollY > 100
             ? setDisplay("sticky")
             : setDisplay(justSticky ? "sticky" : "absolute");
     };

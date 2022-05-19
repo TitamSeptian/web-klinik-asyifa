@@ -10,7 +10,7 @@ const Button = ({
     icon,
     iconPosition,
 }) => {
-    const baseStyle = "mx-auto rounded-md py-2 px-3";
+    const baseStyle = "rounded-md py-2 px-3";
     const btnStyle = {
         primary: `bg-error-600 text-white`,
         secondary: `outline outline-error-300 outline-1 text-error-700`,

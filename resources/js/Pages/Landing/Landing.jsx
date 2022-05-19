@@ -11,18 +11,25 @@ import post2 from "@/src/post2.png";
 import post3 from "@/src/post3.png";
 import diandra from "@/src/diandra.png";
 import Button from "@/Components/Button";
-import { BiTime } from "react-icons/bi";
-import "boxicons";
 import ServiceItem from "../../Components/ServiceItem";
 import RatingItem from "../../Components/RatingItem";
 import Footer from "../../Components/Footer";
 import Navbar from "../../Components/MainNavbar";
+// import { IoLocationOutline } from "react-icons/io";
+import { GoLocation } from "react-icons/go";
+import { BiTime, BiPhone } from "react-icons/bi";
+import { FiPhone } from "react-icons/fi";
+import { Head } from "@inertiajs/inertia-react";
 const Landing = () => {
     return (
         <>
+            <Head>
+                <title>Klinik Asyifa Mariuk</title>
+                <meta name="description" content="A Website" />
+            </Head>
             <Navbar />
             <section className="overflow-x-hidden px-24 relative" id="hero">
-                <div className="grid sm:grid-cols-2 grid-cols-1">
+                <div className="grid sm:grid-cols-2 grid-cols-1 pt-[150px]">
                     <div className="container flex flex-col gap-y-3 justify-center">
                         <h1 className="sm:text-6xl font-semibold">
                             We Are Providing{" "}
@@ -36,7 +43,7 @@ const Landing = () => {
                             elit. Sed dictum venenatis rhoncus. Aliquam dictum
                             enim quam, vitae commodo odio lobortis a.
                         </p>
-                        <div className="buttons">
+                        <div className="inline-flex justify-start items-center gap-3">
                             <Button
                                 variant="primary"
                                 type="submit"
@@ -74,57 +81,84 @@ const Landing = () => {
 
                         <img src={doctor} alt="dokter" />
                     </div>
-                    <div className="sm:col-span-2 bg-thePrimary flex px-3 py-16 items-center rounded-md justify-around text-white mx-auto">
-                        <div className="flex gap-x-2">
-                            <span>
-                                <BiTime size="20px" />
-                            </span>
-                            <div className="text-white">
-                                <h1 className="text-xl font-semibold">
-                                    Opening Hours
-                                </h1>
-                                <p className="font-light">Monday - Sunday</p>
-                                <p className="font-light">
-                                    06:00 AM - 09:00 PM
-                                </p>
+                    <div className="sm:col-span-2 bg-thePrimary px-3 py-16  rounded-md text-white w-full max-w-6xl">
+                        <div className="grid grid-cols-3">
+                            <div className="flex justify-center gap-2">
+                                <span className="justify-self-end">
+                                    <BiTime
+                                        size={32}
+                                        style={{
+                                            width: "inherit",
+                                            height: "inherit",
+                                            verticalAlign: "middle",
+                                        }}
+                                    />
+                                </span>
+                                <div className="">
+                                    <h1 className="text-xl font-semibold">
+                                        Opening Hours
+                                    </h1>
+                                    <p className="font-light">
+                                        Monday - Sunday
+                                    </p>
+                                    <p className="font-light">
+                                        06:00 AM - 09:00 PM
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="flex gap-x-2">
-                            <box-icon
-                                name="phone"
-                                type="regular"
-                                color="white"
-                            ></box-icon>
-                            <div className="text-white">
-                                <h1 className="text-xl font-semibold">
-                                    Contact
-                                </h1>
-                                <p className="font-light">
-                                    klinikasyifamariuk@medical.com
-                                </p>
-                                <p className="font-light">+62 821-1188-8903</p>
+                            <div className="flex justify-center gap-2">
+                                <span className="justify-self-end">
+                                    <BiPhone
+                                        size={32}
+                                        style={{
+                                            width: "inherit",
+                                            height: "inherit",
+                                            verticalAlign: "middle",
+                                        }}
+                                    />
+                                </span>
+                                <div className="">
+                                    <h1 className="text-xl font-semibold">
+                                        Opening Hours
+                                    </h1>
+                                    <p className="font-light">
+                                        Monday - Sunday
+                                    </p>
+                                    <p className="font-light">
+                                        06:00 AM - 09:00 PM
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="flex gap-x-2 w-1/3">
-                            <box-icon
-                                name="location-plus"
-                                type="regular"
-                                color="white"
-                            ></box-icon>
-                            <div className="text-white">
-                                <h1 className="text-xl font-semibold">
-                                    Location
-                                </h1>
-                                <p className="font-light">
-                                    Jl. Karanganyar No.48, Margaluyu,
-                                    Tanjungsari, Kab. Sumedang, Jawa Barat POS
-                                    45362
-                                </p>
+                            <div className="flex justify-center gap-2">
+                                <span className="justify-self-end">
+                                    <GoLocation
+                                        className="text-white"
+                                        size={32}
+                                        style={{
+                                            width: "inherit",
+                                            height: "inherit",
+                                            verticalAlign: "middle",
+                                            fill: "#fff",
+                                            color: "#fff",
+                                        }}
+                                    />
+                                </span>
+                                <div className="">
+                                    <h1 className="text-xl font-semibold">
+                                        Opening Hours
+                                    </h1>
+                                    <p className="font-light">
+                                        Monday - Sunday
+                                    </p>
+                                    <p className="font-light">
+                                        06:00 AM - 09:00 PM
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="bg-white absolute top-1/4 right-52 px-6 py-4 rounded-md flex flex-col gap-y-2">
+                <div className="bg-white absolute px-6 py-4 rounded-md flex flex-col gap-y-2 left-[1120px] top-[406px]">
                     <h2 className="font-semibold">Available doctor</h2>
                     <p className="te-gray-500">select doctor</p>
                     <a className="w-full h-full flex gap-x-2 group hover:bg-gray-100 p-2 rounded-md hover:cursor-pointer">

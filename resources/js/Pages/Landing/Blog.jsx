@@ -5,10 +5,14 @@ import post1 from "@/src/post1.png";
 import post2 from "@/src/post2.png";
 import post3 from "@/src/post3.png";
 import BlogItem from "../../Components/BlogItem";
+import { Head } from "@inertiajs/inertia-react";
 
 const Blog = () => {
     return (
         <>
+            <Head>
+                <title>Klinik Asyifa Mariuk</title>
+            </Head>
             <Navbar justSticky={true} />
             <section className="px-24 my-20">
                 <div className="container flex flex-col gap-y-5 items-center">

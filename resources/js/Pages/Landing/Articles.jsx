@@ -10,10 +10,14 @@ import {
     AiFillLinkedin,
 } from "react-icons/ai";
 import { IoCopyOutline } from "react-icons/io5";
+import { Head } from "@inertiajs/inertia-react";
 
 const Articles = () => {
     return (
         <>
+            <Head>
+                <title>Klinik Asyifa Mariuk</title>
+            </Head>
             <Navbar justSticky={true} />
             <section className="px-24 mt-20">
                 <div className="flex flex-col gap-y-6">
