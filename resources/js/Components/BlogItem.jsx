@@ -3,7 +3,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 const BlogItem = ({ children, img, title, author, publish }) => {
     return (
-        <div className="flex flex-col gap-y-5 w-[384px] h-full">
+        <div className="flex flex-col gap-y-5 w-[384px] h-full space-y-4">
             <div className=" overflow-hidden h-[240px] w-full">
                 <img
                     src={img}

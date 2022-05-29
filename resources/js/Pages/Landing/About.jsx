@@ -19,46 +19,62 @@ const About = () => {
     return (
         <>
             <Head>
-                <title>Klinik Asyifa Mariuk About</title>
+                <title>Klinik Asyifa Mariuk</title>
             </Head>
             <Navbar justSticky={true} />
-            <section className="px-24 mt-20">
+            <section className="md:px-24 px-2">
                 <div className="flex flex-col gap-y-10 justify-center items-center">
-                    <h1 className="text-6xl text-center font-bold">
+                    <h1 className="sm:text-6xl text-2xl md:text-3xl text-center font-bold">
                         Klinik Asyifaa Mariuk Providing{" "}
                         <span className="text-thePrimary underline underline-offset-2">
                             Best and Affordable
                         </span>{" "}
                         Health Care.
                     </h1>
-                    <p className="text-gray-400 text-center w-[800px]">
+                    <p className="text-gray-400 text-center w-auto lg:w-[800px]">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Sed dictum venenatis rhoncus. Aliquam dictum enim quam,
                         vitae commodo odio lobortis a.
                     </p>
                 </div>
             </section>
-            <section className="px-10 mt-16">
-                <div className="flex flex-row justify-between max-w-6xl m-auto space-x-2">
-                    <div className="flex flex-col justify-center items-center">
+            <section className="md:px-10 px-2 mt-16">
+                <div className="flex flex-row md:justify-between justify-evenly max-w-6xl m-auto space-x-2 md:gap-2">
+                    <div className="flex flex-col justify-center items-center order-1">
                         <img src={img1} alt="" className="rounded-lg " />
                     </div>
-                    <div className="flex flex-col space-y-2">
+                    <div className="hidden md:flex md:flex-col space-y-2 order-3 md:order-2 flex-wrap md:flex-nowrap">
                         <div className="flex flex-row space-x-2 justify-end items-end">
-                            <img src={img2} alt="" className="rounded-lg " />
-                            <img src={img3} alt="" className="rounded-lg " />
+                            <img
+                                src={img2}
+                                alt=""
+                                className="rounded-lg order-1"
+                            />
+                            <img
+                                src={img3}
+                                alt=""
+                                className="rounded-lg order-2"
+                            />
                         </div>
-                        <div className="flex flex-row space-x-2 justify-start items-start">
-                            <img src={img5} alt="" className="rounded-lg " />
-                            <img src={img6} alt="" className="rounded-lg " />
+                        <div className="flex md:flex-row space-x-2 justify-start items-start">
+                            <img
+                                src={img5}
+                                alt=""
+                                className="rounded-lg order-2 md:order-1"
+                            />
+                            <img
+                                src={img6}
+                                alt=""
+                                className="rounded-lg order-1 md:order-2"
+                            />
                         </div>
                     </div>
-                    <div className="flex flex-col justify-center items-center">
+                    <div className="flex flex-col justify-center items-center order-2 md:order-3">
                         <img src={img4} alt="" className="rounded-lg " />
                     </div>
                 </div>
             </section>
-            <section className="px-24 mt-20">
+            <section className="md:px-24 px-2 mt-20">
                 <p className="text-gray-400 max-w-[1008px] mx-auto">
                     Creeping his without wherein fill lesser of you set sea
                     very. Let saying fly green were without his waters midst
@@ -78,10 +94,10 @@ const About = () => {
                     living female of.
                 </p>
             </section>
-            <section className="px-24 mt-20 bg-gray-50">
+            <section className="md:px-24 px-2 mt-20 bg-gray-50">
                 <div className="flex flex-wrap py-10">
-                    <div className="w-1/2 flex flex-col gap-y-6">
-                        <h1 className="text-6xl font-bold">
+                    <div className="md:w-1/2 w-full flex flex-col gap-y-6 order-2 md:order-1">
+                        <h1 className="sm:text-6xl text-2xl md:text-3xl font-bold mt-4 md:mt-0">
                             <span className="text-thePrimary">
                                 Best and Affordable
                             </span>{" "}
@@ -100,7 +116,7 @@ const About = () => {
                             wherein which image.
                         </p>
                     </div>
-                    <div className="w-1/2 flex justify-center items-center">
+                    <div className="md:w-1/2 w-full flex justify-center items-center order-1 md:order-2">
                         <div className="flex flex-row justify-between max-w-md gap-2">
                             <div className="flex flex-col justify-start items-start gap-2">
                                 <img src={img7} alt="" className="rounded-lg" />
@@ -136,10 +152,10 @@ const About = () => {
                     </div>
                 </div>
             </section>
-            <section className="px-24 mt-20">
-                <div className="grid sm:grid-cols-3 grid-cols-1">
+            <section className="md:px-24 px-4 mt-20">
+                <div className="grid sm:grid-cols-3 grid-cols-1 gap-3">
                     <div className="col-span-2">
-                        <h1 className="sm:text-6xl font-semibold">
+                        <h1 className="sm:text-6xl text-2xl font-semibold">
                             <span className="text-thePrimary">
                                 {" "}
                                 We're Providing{" "}
@@ -148,7 +164,7 @@ const About = () => {
                         </h1>
                     </div>
                     <div className="">
-                        <p className="px-10">
+                        <p className="md:px-10 px-2">
                             Curabitur elementum, nunc at faucibus finibus, elit
                             magna pulvinar metus, a blandit nunc arcu vel
                             ligula. Fusce in vestibulum sem.
@@ -200,8 +216,8 @@ const About = () => {
                     </ServiceItem>
                 </div>
             </section>
-            <section className="h-[456px] w-full bg-white px-24 flex flex-col justify-center items-center gap-y-5">
-                <h1 className="font-semibold text-5xl text-center">
+            <section className="h-[456px] w-full bg-[#F9FAFB] px-4 mt-20 flex flex-col justify-center items-center gap-y-5">
+                <h1 className="font-semibold md:text-5xl sm:text-3xl text-2xl text-center">
                     Nullam eu ante nec diam egestas gravida et at lorem.
                     Maecenas in suscipit elit, sed ac erat posuere.
                 </h1>

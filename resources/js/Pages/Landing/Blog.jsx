@@ -14,12 +14,12 @@ const Blog = () => {
                 <title>Klinik Asyifa Mariuk</title>
             </Head>
             <Navbar justSticky={true} />
-            <section className="px-24 my-20">
+            <section className="md:px-24 px-4 my-20">
                 <div className="container flex flex-col gap-y-5 items-center">
                     <span className="block text-sm font-semibold text-gray-400">
                         Our blog
                     </span>
-                    <h1 className="text-6xl font-bold">
+                    <h1 className="md:text-6xl text-2xl sm:text-3xl font-bold self-start md:self-auto">
                         Stories and interviews
                     </h1>
                     <p className="text-gray-400 text-sm max-w-[768px]">
@@ -29,7 +29,7 @@ const Blog = () => {
                     <div className="flex gap-x-2 self-center justify-self-center">
                         <input
                             type="email"
-                            className="rounded-lg border-gray-300 border-2 w-[360px] block focus:border-thePrimary transition-all duration-100 ease-in"
+                            className="rounded-lg border-gray-300 border-2 md:w-[360px] w-full block focus:border-thePrimary transition-all duration-100 ease-in"
                             placeholder="Enter Your Email"
                         />
                         <button className="block w-full text-center text-white bg-error-600 py-2 rounded-lg">
@@ -41,7 +41,7 @@ const Blog = () => {
                     </p>
                 </div>
             </section>
-            <section className="px-24">
+            <section className="md:px-24 px-4">
                 <h1 className="text-2xl font-bold">Recent Blog Post</h1>
                 <div className="grid overflow-hidden sm:grid-cols-2 grid-cols-1 sm:grid-rows-2 grid-rows-1 gap-2 mt-10">
                     <div className="sm:row-span-2">
@@ -124,7 +124,7 @@ const Blog = () => {
                     </div>
                 </div>
             </section>
-            <section className="px-24 my-20">
+            <section className="md:px-24 px-4 my-20">
                 <h1 className="text-2xl font-bold my-10">All Blog Post</h1>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <BlogItem

@@ -19,7 +19,7 @@ const Articles = () => {
                 <title>Klinik Asyifa Mariuk</title>
             </Head>
             <Navbar justSticky={true} />
-            <section className="px-24 mt-20">
+            <section className="md:px-24 px-4 md:mt-20 mt-5">
                 <div className="flex flex-col gap-y-6">
                     <div className="bg-gray-50 rounded-full px-3 py-1 text-gray-500 font-semibold justify-self-start self-start text-xs">
                         <span className="bg-white rounded-full px-3 py-0.5 mr-2">
@@ -27,24 +27,24 @@ const Articles = () => {
                         </span>
                         8 min read
                     </div>
-                    <h1 className="text-5xl font-semibold">
+                    <h1 className="text-2xl md:text-3xl lg:text-5xl font-semibold">
                         Bill Walsh leadership lessons
                     </h1>
-                    <p className="text-gray-400 text-md w-2/3">
+                    <p className="text-gray-400 text-md md:w-2/3 w-full">
                         Like to know the secrets of transforming a 2-14 team
                         into a 3x Super Bowl winning Dynasty? Lorem ipsum dolor
                         sit amet, consectetur adipiscing elit.
                     </p>
                 </div>
             </section>
-            <section className="px-24 mt-10">
+            <section className="md:px-24 px-4 mt-10">
                 <div className="flex flex-col gap-y-6">
                     <img
                         src={ImagePost}
                         alt="post tumbnail"
                         className="w-full h-auto rounded-xl"
                     />
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center flex-col md:flex-row gap-3">
                         <div className="flex gap-x-3 font-semibold">
                             <div className="flex flex-col gap-y-3">
                                 <h1 className="text-sm text-gray-400">
@@ -105,9 +105,9 @@ const Articles = () => {
                     </div>
                 </div>
             </section>
-            <section className="px-24 mt-20">
-                <div className="flex gap-5">
-                    <div className="w-2/3 order-1 flex flex-col gap-y-5 max-w-[60%] text-gray-400">
+            <section className="md:px-24 px-4 mt-20">
+                <div className="flex gap-5 flex-wrap">
+                    <div className="md:w-2/3 w-full order-1 flex flex-col gap-y-5 md:max-w-[60%] max-w-full text-gray-400">
                         <p className="">
                             Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. Donec ullamcorper mattis lorem non. Ultrices
@@ -275,7 +275,7 @@ const Articles = () => {
                             posuere gravida enim posuere cursus diam.
                         </p>
                     </div>
-                    <div className="w-1/3 order-2">
+                    <div className="md:w-1/3 w-full order-2">
                         <div className="flex flex-col gap-y-3 p-7 shadow-xl rounded-xl max-w-[384px] mx-auto">
                             <span>
                                 <svg

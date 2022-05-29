@@ -4,8 +4,8 @@ import logo from "@/src/logo.svg";
 
 const Footer = () => {
     return (
-        <footer className="px-24 bg-[#F9FAFB] py-10 divide-y">
-            <div className="flex justify-between sm:flex-nowrap flex-wrap pb-8">
+        <footer className="md:px-24 px-4 bg-[#F9FAFB] py-10 divide-y grid grid-cols-1 md:grid-cols-1 justify-between gap-3">
+            <div className="flex justify-between sm:flex-nowrap flex-wrap pb-8 gap-3">
                 <img src={logo} alt="logo" />
                 <h1 className="font-semibold w-[272px]">
                     We Are Providing{" "}
@@ -15,7 +15,7 @@ const Footer = () => {
                     Health Care.
                 </h1>
             </div>
-            <div className="flex justify-between pt-8">
+            <div className="flex justify-between pt-8 sm:flex-nowrap flex-wrap gap-3">
                 <p>&copy; 2022 Klinik Asyifa Mariuk</p>
                 <ul className="flex gap-x-6">
                     <li>Home</li>

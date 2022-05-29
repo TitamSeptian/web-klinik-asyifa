@@ -28,10 +28,13 @@ const Landing = () => {
                 <meta name="description" content="A Website" />
             </Head>
             <Navbar />
-            <section className="overflow-x-hidden px-24 relative" id="hero">
-                <div className="grid sm:grid-cols-2 grid-cols-1 pt-[150px]">
+            <section
+                className="overflow-x-hidden md:px-24 px-2 relative max-w-max mx-auto container"
+                id="hero"
+            >
+                <div className="grid  sm:grid-cols-2 grid-cols-1 pt-[150px] gap-3">
                     <div className="container flex flex-col gap-y-3 justify-center">
-                        <h1 className="sm:text-6xl font-semibold">
+                        <h1 className="sm:text-6xl text-2xl md:text-3xl font-semibold">
                             We Are Providing{" "}
                             <span className="underline underline-offset-2 text-thePrimary ">
                                 Best and Affordable
@@ -81,8 +84,8 @@ const Landing = () => {
 
                         <img src={doctor} alt="dokter" />
                     </div>
-                    <div className="sm:col-span-2 bg-thePrimary px-3 py-16  rounded-md text-white w-full max-w-6xl">
-                        <div className="grid grid-cols-3">
+                    <div className="sm:col-span-2 bg-thePrimary px-3 py-16  rounded-md text-white w-full max-w-6xl mx-auto">
+                        <div className="grid sm:grid-cols-3 grid-cols-1 gap-3">
                             <div className="flex justify-center gap-2">
                                 <span className="justify-self-end">
                                     <BiTime
@@ -158,10 +161,10 @@ const Landing = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-white absolute px-6 py-4 rounded-md flex flex-col gap-y-2 left-[1120px] top-[406px]">
+                <div className="bg-white lg:absolute mt-4 lg:mt-0 static px-6 py-4 rounded-md flex flex-col items-center border border-red-600 gap-y-2 lg:left-[1120px] lg:top-[406px]">
                     <h2 className="font-semibold">Available doctor</h2>
                     <p className="te-gray-500">select doctor</p>
-                    <a className="w-full h-full flex gap-x-2 group hover:bg-gray-100 p-2 rounded-md hover:cursor-pointer">
+                    <a className="lg:w-full lg:h-full w-auto h-auto flex gap-x-2 group hover:bg-gray-100 p-2 rounded-md hover:cursor-pointer">
                         <img
                             src={smallDoctor}
                             alt="doctor"
@@ -172,7 +175,7 @@ const Landing = () => {
                             <h2>Eye spesialist</h2>
                         </div>
                     </a>
-                    <a className="w-full h-full flex gap-x-2 group hover:bg-gray-100 p-2 rounded-md hover:cursor-pointer">
+                    <a className="lg:w-full lg:h-full w-auto h-auto flex gap-x-2 group hover:bg-gray-100 p-2 rounded-md hover:cursor-pointer">
                         <img
                             src={smallDoctor2}
                             alt="doctor"
@@ -188,10 +191,10 @@ const Landing = () => {
                     </button>
                 </div>
             </section>
-            <section className="px-24 mt-20">
-                <div className="grid sm:grid-cols-2 grid-cols-1">
+            <section className="md:px-24 px-4 mt-20">
+                <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
                     <div className="">
-                        <h1 className="sm:text-6xl font-semibold">
+                        <h1 className="sm:text-6xl font-semibold text-2xl">
                             The{" "}
                             <span className="text-thePrimary">
                                 Best Quality
@@ -200,7 +203,7 @@ const Landing = () => {
                         </h1>
                     </div>
                     <div className="">
-                        <p className="px-10">
+                        <p className="lg:px-10">
                             Curabitur elementum, nunc at faucibus finibus, elit
                             magna pulvinar metus, a blandit nunc arcu vel
                             ligula. Fusce in vestibulum sem.
@@ -210,9 +213,9 @@ const Landing = () => {
             </section>
             <section
                 id="service"
-                className="relative overflow-y-hidden px-24 mt-20"
+                className="relative overflow-y-hidden md:px-24 px-2 mt-20"
             >
-                <div className="grid sm:grid-cols-2 grid-cols-1">
+                <div className="grid md:grid-cols-2 grid-cols-1">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6">
                         <ServiceItem title="Patient Safety">
                             Donec euismod felis ut faucibus pellentesque. Nullam
@@ -253,8 +256,8 @@ const Landing = () => {
                     {/* <div className="sm:col-span-2 h-10 w-full bg-white"></div> */}
                 </div>
             </section>
-            <section className="h-[456px] w-full bg-[#F9FAFB] px-24 flex flex-col justify-center items-center gap-y-5">
-                <h1 className="font-semibold text-5xl text-center">
+            <section className="h-[456px] w-full bg-[#F9FAFB] px-4 mt-20 flex flex-col justify-center items-center gap-y-5">
+                <h1 className="font-semibold md:text-5xl sm:text-3xl text-2xl text-center">
                     Nullam eu ante nec diam egestas gravida et at lorem.
                     Maecenas in suscipit elit, sed ac erat posuere.
                 </h1>
@@ -264,10 +267,10 @@ const Landing = () => {
                     <p className="font-light">Product Manager, Sisyphus</p>
                 </div>
             </section>
-            <section className="px-24 mt-20">
-                <div className="grid sm:grid-cols-3 grid-cols-1">
+            <section className="md:px-24 px-4 mt-20">
+                <div className="grid sm:grid-cols-3 grid-cols-1 gap-3">
                     <div className="col-span-2">
-                        <h1 className="sm:text-6xl font-semibold">
+                        <h1 className="sm:text-6xl text-2xl font-semibold">
                             <span className="text-thePrimary">
                                 {" "}
                                 We're Providing{" "}
@@ -276,7 +279,7 @@ const Landing = () => {
                         </h1>
                     </div>
                     <div className="">
-                        <p className="px-10">
+                        <p className="md:px-10 px-2">
                             Curabitur elementum, nunc at faucibus finibus, elit
                             magna pulvinar metus, a blandit nunc arcu vel
                             ligula. Fusce in vestibulum sem.
@@ -328,24 +331,24 @@ const Landing = () => {
                     </ServiceItem>
                 </div>
             </section>
-            <section className="px-24 mt-20">
+            <section className="md:px-24 px-4 mt-16">
                 <div className="flex flex-col justify-center items-center gap-6">
-                    <h1 className="text-6xl font-semibold">
+                    <h1 className="sm:text-6xl md:text-4xl text-2xl font-semibold">
                         Meet Our <span className="text-thePrimary">Expert</span>{" "}
                         Specialists
                     </h1>
-                    <p className="text-gray-400 px-10 text-center">
+                    <p className="text-gray-400 md:px-10 px-2 sm:text-left text-center">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Sed a quam vel justo semper luctus tempus sit amet
                         mauris. Morbi orci ligula, fermentum nec diam pharetra,
                         lobortis vestibulum lorem.
                     </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-20">
-                        <div className="flex flex-col bg-[#F9FAFB] rounded-2xl w-[384px] h-[480px] justify-end items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-20">
+                        <div className="flex flex-col  rounded-2xl w-full justify-end items-center">
                             <img
                                 src={diandra}
                                 alt="doctor"
-                                className="object-fit w-2/3 h-auto"
+                                className="object-fit h-auto"
                             />
                             <div className="flex flex-col text-white rounded-2xl bg-thePrimary gap-2 p-4 w-full">
                                 <h1 className="font-semibold">
@@ -354,11 +357,11 @@ const Landing = () => {
                                 <p className="font-light">Dermatologists</p>
                             </div>
                         </div>
-                        <div className="flex flex-col bg-[#F9FAFB] rounded-2xl w-[384px] h-[480px] justify-end items-center">
+                        <div className="flex flex-col  rounded-2xl w-full justify-end items-center">
                             <img
                                 src={kanda}
                                 alt="doctor"
-                                className="object-fit w-2/3 h-auto"
+                                className="object-fit h-auto"
                             />
                             <div className="flex flex-col text-white rounded-2xl bg-thePrimary gap-2 p-4 w-full">
                                 <h1 className="font-semibold">
@@ -367,11 +370,11 @@ const Landing = () => {
                                 <p className="font-light">Dermatologists</p>
                             </div>
                         </div>
-                        <div className="flex flex-col bg-[#F9FAFB] rounded-2xl w-[384px] h-[480px] justify-end items-center">
+                        <div className="flex flex-col  rounded-2xl w-full justify-end items-center">
                             <img
                                 src={bagus}
                                 alt="doctor"
-                                className="object-fit w-2/3 h-auto"
+                                className="object-fit h-auto"
                             />
                             <div className="flex flex-col text-white rounded-2xl bg-thePrimary gap-2 p-4 w-full">
                                 <h1 className="font-semibold">
@@ -383,9 +386,9 @@ const Landing = () => {
                     </div>
                 </div>
             </section>
-            <section className="px-24 bg-[#F9FAFB] mt-20 pb-12">
+            <section className="md:px-24 px-4 bg-[#F9FAFB] mt-20 pb-12">
                 <div className="flex flex-col justify-center items-center gap-6 pt-20">
-                    <h1 className="text-6xl font-semibold">
+                    <h1 className="md:text-6xl sm:text-3xl text-2xl font-semibold">
                         Let's See What{" "}
                         <span className="text-thePrimary">Patient</span> Says!
                     </h1>
@@ -433,9 +436,9 @@ const Landing = () => {
                     </RatingItem>
                 </div>
             </section>
-            <section className="px-24 mt-20 pb-20">
+            <section className="md:px-24 px-4 mt-20 pb-20">
                 <div className="flex flex-col justify-center items-center gap-6">
-                    <h1 className="text-6xl font-semibold">
+                    <h1 className="md:text-6xl sm:text-3xl text-2xl font-semibold">
                         Read Our <span className="text-thePrimary">Latest</span>{" "}
                         News!
                     </h1>
@@ -446,11 +449,11 @@ const Landing = () => {
                         lobortis vestibulum lorem.
                     </p>
                     <div className="p-3 flex justify-center items-center hover:cursor-pointer">
-                        <div className="bg-[#FEF3F2] rounded-full px-3 py-1 text-thePrimary font-semibold">
-                            <span className="bg-white rounded-full px-3 py-0.5 mr-2">
+                        <div className="bg-[#FEF3F2] rounded-full px-4 py-1 text-thePrimary font-semibold flex flex-col sm:block">
+                            <span className="bg-white rounded-full px-3 py-0.5 mr-2 justify-self-center items-center text-center sm:text-left">
                                 New articles
                             </span>
-                            Check out our latest update
+                            <span>Check out our latest update</span>
                         </div>
                     </div>
                 </div>
