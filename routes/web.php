@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -34,6 +35,6 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard/Dashboard');
 });
 
-Route::get('/dashboardss', function () {
-    return view('dashboard.master');
+Route::prefix("/admin")->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 });

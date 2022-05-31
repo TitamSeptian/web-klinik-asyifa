@@ -18,6 +18,9 @@ return new class extends Migration
             $table->string('title');
             $table->text('body');
             $table->string('slug')->unique();
+            $table->string('thumbnail')->nullable();
+            $table->string('cover');
+            $table->enum('status', ['PUBLISHED', 'DRAFT'])->default('DRAFT');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
 
@@ -27,8 +30,7 @@ return new class extends Migration
             $table->unsignedBigInteger('tag_id');
             $table->foreign('tag_id')->references('id')->on('tags');
 
-            $table->unsignedBigInteger('media_id');
-            $table->foreign('media_id')->references('id')->on('media');
+
             $table->timestamps();
         });
     }
