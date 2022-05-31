@@ -66,4 +66,28 @@
     .section-container {
         @apply px-24 max-w-screen-xl;
     }
+
+    .table-wrapper {
+    }
+
+    .table-wrapper::-webkit-scrollbar-track {
+        /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+        background-color: transparent;
+        /* background-color: red; */
+    }
+
+    .table-wrapper::-webkit-scrollbar {
+        width: 6px;
+        /* background-color: red; */
+    }
+
+    .table-wrapper::-webkit-scrollbar-thumb {
+        /* background-color: #0b1f41;
+        width: 6px;
+        border-radius: 20px; */
+        background-color: #d6dee1;
+        border-radius: 20px;
+        border: 6px solid transparent;
+        background-clip: content-box;
+    }
 }

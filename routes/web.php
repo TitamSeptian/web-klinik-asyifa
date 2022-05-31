@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -37,4 +38,5 @@ Route::get('/dashboard', function () {
 
 Route::prefix("/admin")->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('/tags', TagController::class);
 });

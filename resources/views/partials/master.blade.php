@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     @stack('css')
     <title>{{ $title }}</title>
 </head>
@@ -62,7 +64,7 @@
                             </a>
                         </div>
                         <div class="grid gap-2">
-                            <a href="#"
+                            <a href="{{ route('tags.index') }}"
                                 class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group {{ $activePage == 'tag' ? 'bg-gray-100 text-gray-600' : '' }}">
                                 <i
                                     class="text-xl text-gray-400 transition-all duration-300 bx bx-label group-hover:text-gray-600"></i>
@@ -141,13 +143,15 @@
                 {{-- endnavbar --}}
                 {{-- content --}}
                 <div class="">
+                    @include('partials.alert')
                     @yield('content')
                 </div>
                 {{-- endcontent --}}
             </main>
         </section>
     </div>
-    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
     @stack('js')
 </body>
 
