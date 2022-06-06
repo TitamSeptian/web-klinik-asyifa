@@ -21,7 +21,7 @@ mix.js("resources/js/app.js", "public/js")
     .alias({
         "@": "resources/js",
     });
-
+mix.disableNotifications();
 if (mix.inProduction()) {
     mix.version();
 }

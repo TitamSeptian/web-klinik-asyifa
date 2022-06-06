@@ -36,7 +36,7 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard/Dashboard');
 });
 
-Route::prefix("/admin")->group(function () {
+Route::prefix("/admin")->middleware(["auth"])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('/tags', TagController::class);
 });

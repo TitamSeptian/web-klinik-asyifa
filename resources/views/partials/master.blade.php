@@ -63,6 +63,18 @@
                                 </span>
                             </a>
                         </div>
+                        <div class="grid gap-2 ">
+                            <a href="/views/room/index.php"
+                                class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group"
+                                id="rooms">
+                                <i
+                                    class="text-xl text-gray-400 transition-all duration-300 bx bx-plus-medical group-hover:text-gray-600"></i>
+                                <span
+                                    class="font-semibold text-gray-400 transition-all duration-300 group-hover:text-gray-600">
+                                    Doctor
+                                </span>
+                            </a>
+                        </div>
                         <div class="grid gap-2">
                             <a href="{{ route('tags.index') }}"
                                 class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group {{ $activePage == 'tag' ? 'bg-gray-100 text-gray-600' : '' }}">
@@ -107,7 +119,7 @@
                             </a>
                         </div>
                         <div class="grid gap-2">
-                            <a href="/views/user/index.php"
+                            <a href="javascript:void(0)" id="btn-logout"
                                 class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group">
                                 <i
                                     class="text-xl text-gray-400 transition-all duration-300 bx bx-log-out group-hover:text-gray-600"></i>
@@ -116,6 +128,10 @@
                                     Logout
                                 </span>
                             </a>
+                            <form action="{{ route('logout') }}" method="post" id="form-logout">
+                                @csrf
+                                @method('POST')
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -134,9 +150,8 @@
                                     alt="Logo" />
                             </a>
                         </div>
-                        <div
-                            class="flex items-center gap-2 font-semibold text-gray-400 uppercase bg-transparent text-md">
-                            <span>User</span>
+                        <div class="flex items-center gap-2 font-semibold text-gray-400 bg-transparent text-md">
+                            <span>{{ Auth::user()->name }}</span>
                         </div>
                     </div>
                 </nav>
@@ -152,6 +167,14 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="{{ asset('js/script.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $("body").on("click", "#btn-logout", function() {
+                alert("asd");
+                $("#form-logout").submit();
+            });
+        });
+    </script>
     @stack('js')
 </body>
 

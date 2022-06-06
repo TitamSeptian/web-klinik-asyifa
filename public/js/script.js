@@ -1,6 +1,7 @@
 $(".close-alert").click(function (e) {
     $(this).parent().fadeOut();
 });
+
 // $.ajaxSetup({
 //     headers: {
 //         "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
