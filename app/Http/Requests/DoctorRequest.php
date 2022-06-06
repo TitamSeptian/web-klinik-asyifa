@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class TagRequest extends FormRequest
+class DoctorRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,7 +24,9 @@ class TagRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required', 'string', 'max:255'],
+            'name' => ['required'],
+            'image' => ['required', 'mimes:jpeg,jpg,png'],
+            'specialist' => ['required'],
         ];
     }
 
@@ -32,8 +34,9 @@ class TagRequest extends FormRequest
     {
         return [
             'name.required' => 'Name is required',
-            'name.string' => 'Name must be a string',
-            'name.max' => 'Name must be less than 255 characters',
+            'image.required' => 'Image is required',
+            'image.mimes' => 'Image must be jpeg, jpg or png',
+            'specialist.required' => 'Specialist is required',
         ];
     }
 }

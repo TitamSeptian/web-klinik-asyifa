@@ -1,7 +1,16 @@
 $(".close-alert").click(function (e) {
     $(this).parent().fadeOut();
 });
-
+$(document).ready(function () {
+    function showPreview(event) {
+        if (event.target.files.length > 0) {
+            let src = URL.createObjectURL(event.target.files[0]);
+            let preview = document.getElementById("preview-image");
+            preview.src = src;
+            preview.classList.remove("hidden");
+        }
+    }
+});
 // $.ajaxSetup({
 //     headers: {
 //         "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),

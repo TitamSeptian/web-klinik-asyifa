@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -39,4 +40,5 @@ Route::get('/dashboard', function () {
 Route::prefix("/admin")->middleware(["auth"])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('/tags', TagController::class);
+    Route::resource('/doctor', DoctorController::class);
 });
