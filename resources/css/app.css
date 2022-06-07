@@ -21,6 +21,14 @@
         @apply bg-white text-gray-800 hover:bg-gray-200 focus:bg-gray-800 focus:text-white;
     }
 
+    .btn-blue {
+        @apply bg-blue-700 text-white hover:bg-blue-700 focus:bg-blue-700 focus:text-white ring ring-offset-2 ring-transparent focus:ring-blue-700;
+    }
+
+    .btn-blue-outline {
+        @apply bg-white text-blue-700 hover:bg-blue-700 focus:bg-blue-700 focus:text-white hover:text-white;
+    }
+
     .btn-icon {
         @apply h-10 w-10 grid place-items-center text-sm p-0 rounded-xl;
     }

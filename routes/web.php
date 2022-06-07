@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
@@ -43,4 +44,6 @@ Route::prefix("/admin")->middleware(["auth"])->group(function () {
     Route::resource('/tags', TagController::class);
     Route::resource('/doctor', DoctorController::class);
     Route::resource('/service', ServiceController::class);
+    Route::resource('/post', PostController::class);
+    Route::put('/post/{post}/status', [PostController::class, 'status'])->name('post.status');
 });

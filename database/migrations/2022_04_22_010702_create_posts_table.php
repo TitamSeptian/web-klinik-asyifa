@@ -16,19 +16,14 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->text('body');
             $table->string('slug')->unique();
-            $table->string('thumbnail')->nullable();
+            $table->string('thumbnail');
             $table->string('cover');
+            $table->text('body');
             $table->enum('status', ['PUBLISHED', 'DRAFT'])->default('DRAFT');
+            $table->dateTime('published_at')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories');
-
-            $table->unsignedBigInteger('tag_id');
-            $table->foreign('tag_id')->references('id')->on('tags');
 
 
             $table->timestamps();

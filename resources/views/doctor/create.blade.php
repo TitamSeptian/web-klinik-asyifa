@@ -28,7 +28,7 @@
                 <div class="form-control relative">
                     <label class="btn" for="image">Upload Thumbnail</label>
                     <input accept="image/png, image/jpeg" class="sr-only" type="file" name="image" id="image"
-                        onchange="showPreview(event);">
+                        data-target="preview-image" onchange="showPreview(event);">
                     @error('image')
                         <span class="invalid">{{ $message }}</span>
                     @enderror

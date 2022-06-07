@@ -40,8 +40,8 @@
                             </a>
                         </div>
                         <div class="grid gap-2 ">
-                            <a href="/views/room/index.php"
-                                class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group"
+                            <a href="{{ route('post.index') }}"
+                                class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group {{ $activePage == 'post' ? 'bg-gray-100 text-gray-600' : '' }}"
                                 id="rooms">
                                 <i
                                     class="text-xl text-gray-400 transition-all duration-300 bx bx-repost group-hover:text-gray-600"></i>
@@ -70,6 +70,17 @@
                                 <span
                                     class="font-semibold text-gray-400 transition-all duration-300 group-hover:text-gray-600">
                                     Doctor
+                                </span>
+                            </a>
+                        </div>
+                        <div class="grid gap-2">
+                            <a href="#"
+                                class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group {{ $activePage == 'gallery' ? 'bg-gray-100 text-gray-600' : '' }}">
+                                <i
+                                    class="text-xl text-gray-400 transition-all duration-300 bx bx-images group-hover:text-gray-600"></i>
+                                <span
+                                    class="font-semibold text-gray-400 transition-all duration-300 group-hover:text-gray-600">
+                                    Gallery
                                 </span>
                             </a>
                         </div>
@@ -169,7 +180,9 @@
         function showPreview(event) {
             if (event.target.files.length > 0) {
                 let src = URL.createObjectURL(event.target.files[0]);
-                let preview = document.getElementById("preview-image");
+                let target = event.target.dataset.target;
+                console.log(target);
+                let preview = document.getElementById(target);
                 preview.src = src;
                 preview.classList.remove("hidden");
             }

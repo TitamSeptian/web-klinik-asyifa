@@ -5,7 +5,9 @@ $(document).ready(function () {
     function showPreview(event) {
         if (event.target.files.length > 0) {
             let src = URL.createObjectURL(event.target.files[0]);
-            let preview = document.getElementById("preview-image");
+            let target = event.dataset.target;
+            console.log(target);
+            let preview = document.getElementById(target);
             preview.src = src;
             preview.classList.remove("hidden");
         }

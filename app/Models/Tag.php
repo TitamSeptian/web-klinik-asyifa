@@ -9,4 +9,10 @@ class Tag extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+
+    public function posts()
+    {
+        return $this->hasMany(TagPost::class, 'tag_id', 'id');
+    }
 }
