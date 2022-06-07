@@ -1,4 +1,4 @@
-@extends('partials.master', ['title' => 'Doctor', 'activePage' => 'doctor'])
+@extends('partials.master', ['title' => 'Service', 'activePage' => 'service'])
 
 @push('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('vendor/dataTables/jquery.dataTables.css') }}">
@@ -96,9 +96,9 @@
 @section('content')
     <h1
         class="text-gray-800 text-3xl font-black capitalize after:content-[''] after:block after:w-10 after:h-1 after:bg-gray-800 after:rounded-full">
-        Doctor
+        Services
     </h1>
-    <a href="{{ route('doctor.create') }}" class="btn btn-sm mb-4 my-4"><i class='bx bx-plus'></i> Tambah</a>
+    <a href="{{ route('service.create') }}" class="btn btn-sm mb-4 my-4"><i class='bx bx-plus'></i> Tambah</a>
 
     {{-- <div class="overflow-x-auto table-wrapper"> --}}
     {{-- <div class="inline-block p-3 min-w-full"> --}}
@@ -106,30 +106,31 @@
         <table class="min-w-full" id="dataTable">
             <thead class="thead">
                 <tr>
-                    <th scope="col" class="th">Foto</th>
-                    <th scope="col" class="th">Nama</th>
-                    <th scope="col" class="th">Spesialist</th>
+                    <th scope="col" class="th">Icon</th>
+                    <th scope="col" class="th">Title</th>
+                    <th scope="col" class="th">Deskripsi</th>
+                    <th scope="col" class="th">Tipe</th>
                     <th scope="col" class="th"></th>
                 </tr>
             </thead>
             <tbody class="divide-y-2">
-                @foreach ($doctors as $doctor)
+                @foreach ($services as $service)
                     <tr class="bg-white border-b ">
+                        <td class="td">{!! $service->icon !!}</td>
                         <td class="td">
-                            {{-- <div class=" rounded-2xl overflow-hidden"> --}}
-                            <img class="object-cover h-auto max-w-[100px] aspect-[1/1]"
-                                src="{{ \Storage::url($doctor->path_image) }}" alt="">
-                            {{-- </div> --}}
+                            {{ $service->title }}
                         </td>
-                        <td class="td font-medium text-gray-900">{{ $doctor->name }}</td>
-                        <td class="td font-medium text-gray-900">{{ $doctor->specialist }}</td>
-                        <td class="td flex space-x-2 justify-end items-center h-full">
-                            <a class="btn btn-sm" href="{{ route('doctor.edit', $doctor->id) }}">Edit</a>
-                            <form action="{{ route('doctor.destroy', $doctor->id) }}" method="post">
+                        <td class="td font-medium text-gray-900">
+                            <article class="prose">{!! $service->description !!}</article>
+                        </td>
+                        <td class="td font-medium text-gray-900">{{ $service->type }}</td>
+                        <td class="td flex space-x-2 justify-end">
+                            <a class="btn btn-sm" href="{{ route('service.edit', $service->id) }}">Edit</a>
+                            <form action="{{ route('service.destroy', $service->id) }}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-sm btn-outline" type="submit"
-                                    onClick="javascript: return confirm('Doctor akan dihapus ?');">Delete</button>
+                                    onClick="javascript: return confirm('Tag akan dihapus ?');">Delete</button>
                             </form>
                         </td>
                     </tr>
@@ -142,7 +143,6 @@
 @endsection
 @push('js')
     <script type="text/javascript" charset="utf8" src="{{ asset('vendor/dataTables/jquery.dataTables.js') }}"></script>
-
     <script>
         $(document).ready(function() {
             $('#dataTable').DataTable({

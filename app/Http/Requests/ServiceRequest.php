@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class TagRequest extends FormRequest
+class ServiceRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,17 +24,19 @@ class TagRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => ['required', 'string', 'max:255'],
+            'title' => ['required'],
+            'description' => ['required'],
+            'icon' => ['nullable'],
+            'type' => ['required'],
         ];
     }
 
     public function messages()
     {
         return [
-            'name.required' => 'Nama harus diisi',
-            'name.string' => 'Nama harus kalimat',
-            'name.max' => 'Nama tidak boleh lebih dari 255 karakter',
-
+            'title.required' => 'Title harus di isi',
+            'description.required' => 'Description harus di isi',
+            'type.required' => 'Type harus di isi',
         ];
     }
 }

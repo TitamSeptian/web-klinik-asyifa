@@ -33,10 +33,10 @@ class DoctorRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'Name is required',
-            'image.required' => 'Image is required',
-            'image.mimes' => 'Image must be jpeg, jpg or png',
-            'specialist.required' => 'Specialist is required',
+            'name.required' => 'Nama Harus di isi',
+            'image.required' => 'Gambar Harus di isi',
+            'image.mimes' => 'Image harus jpeg, jpg atau png',
+            'specialist.required' => 'Specialist harus di isi',
         ];
     }
 }

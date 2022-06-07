@@ -52,9 +52,8 @@
                             </a>
                         </div>
                         <div class="grid gap-2 ">
-                            <a href="/views/room/index.php"
-                                class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group"
-                                id="rooms">
+                            <a href="{{ route('service.index') }}"
+                                class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group {{ $activePage == 'service' ? 'bg-gray-100 text-gray-600' : '' }}">
                                 <i
                                     class="text-xl text-gray-400 transition-all duration-300 bx bx-building group-hover:text-gray-600"></i>
                                 <span
@@ -164,7 +163,7 @@
             </main>
         </section>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
     <script>
         function showPreview(event) {

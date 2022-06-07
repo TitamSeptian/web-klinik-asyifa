@@ -1,8 +1,8 @@
 @extends('partials.master', ['title' => 'Tags', 'activePage' => 'tag'])
 
 @push('css')
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.css">
-    <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ asset('vendor/dataTables/jquery.dataTables.css') }}">
+    <link href="{{ asset('vendor/dataTables/responsive.dataTables.min.css') }}" rel="stylesheet">
     <style>
         /*Overrides for Tailwind CSS */
 
@@ -91,7 +91,6 @@
             background-color: #1f2937 !important;
             /*bg-indigo-500*/
         }
-
     </style>
 @endpush
 @section('content')
@@ -137,7 +136,7 @@
     {{-- </div> --}}
 @endsection
 @push('js')
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="{{ asset('vendor/dataTables/jquery.dataTables.js') }}"></script>
     <script>
         $(document).ready(function() {
             $('#dataTable').DataTable({

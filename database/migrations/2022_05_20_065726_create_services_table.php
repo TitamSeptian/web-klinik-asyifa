@@ -18,7 +18,6 @@ return new class extends Migration
             $table->string("slug");
             $table->string("title");
             $table->text("description");
-            $table->string("image")->nullable();
             $table->text("icon")->nullable();
             $table->enum("type", ["service", "lab"]);
             $table->timestamps();
