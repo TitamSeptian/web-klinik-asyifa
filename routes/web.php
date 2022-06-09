@@ -7,6 +7,7 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -38,6 +39,7 @@ Route::prefix("/admin")->middleware(["auth"])->group(function () {
     Route::resource('/doctor', DoctorController::class);
     Route::resource('/service', ServiceController::class);
     Route::resource('/post', PostController::class);
+    Route::resource('/user', UserController::class);
     Route::put('/post/{post}/status', [PostController::class, 'status'])->name('post.status');
     Route::resource('/gallery', GalleryController::class);
 });

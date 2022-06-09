@@ -13,7 +13,7 @@ class UserRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,10 +23,14 @@ class UserRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'name' => ['required', 'string', 'max:100'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ];
+        $rules = [];
+        $rules['name'] = ['required', 'string', 'max:100'];
+        $rules['email'] = ['required', 'string', 'email', 'max:100', 'unique:users'];
+        if ($this->isMethod('POST')) {
+            $rules['password'] = ['required', 'string', 'min:8', 'confirmed'];
+        } else {
+            $rules['password'] = ['nullable', 'string', 'min:8', 'confirmed'];
+        }
+        return $rules;
     }
 }

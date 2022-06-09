@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Requests\UserRequest as Request;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -13,7 +15,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::all();
+        return view('user.index', compact('users'));
     }
 
     /**
@@ -23,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        return view('user.create');
     }
 
     /**
@@ -34,7 +37,12 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = User::create($request->all());
+        if ($user) {
+            return redirect()->route('user.index')->with('success', 'User berhasil ditambahkan');
+        } else {
+            return redirect()->route('user.index')->with('error', 'User gagal dibuat');
+        }
     }
 
     /**
@@ -56,7 +64,8 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('user.edit', compact('user'));
     }
 
     /**
@@ -68,7 +77,13 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+        $user->update($request->all());
+        if ($user) {
+            return redirect()->route('user.index')->with('success', 'User berhasil diubah');
+        } else {
+            return redirect()->route('user.index')->with('error', 'User gagal diubah');
+        }
     }
 
     /**
@@ -79,6 +94,15 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        if ($user->id == Auth::id()) {
+            return redirect()->route('user.index')->with('error', 'User yang login tidak dapat dihapus');
+        }
+        $user->delete();
+        if ($user) {
+            return redirect()->route('user.index')->with('success', 'User berhasil dihapus');
+        } else {
+            return redirect()->route('user.index')->with('error', 'User gagal dihapus');
+        }
     }
 }
