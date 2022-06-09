@@ -54,6 +54,7 @@ class PostController extends Controller
             'slug' => Str::of($request->title)->slug('-') . '-' . date("Ymd"),
             'body' => $request->body,
             'cover' => $pathCover,
+            'mini_body' => $request->mini_body,
             'thumbnail' => $pathThumbnail,
             'user_id' => auth()->id(),
         ]);
@@ -112,6 +113,7 @@ class PostController extends Controller
         $data['title'] = $request->title;
         $data['slug'] = $slug;
         $data['body'] = $request->body;
+        $data['mini_body'] = $request->mini_body;
         if ($request->hasFile('thumbnail')) {
             if (Storage::disk('local')->exists($post->thumbnail)) {
                 Storage::delete($post->thumbnail);

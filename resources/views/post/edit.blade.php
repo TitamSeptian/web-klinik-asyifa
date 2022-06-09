@@ -51,6 +51,10 @@
             </div>
         </div>
         <div class="form-control sm:col-span-2 mt-2">
+            <label for="body" class="label">Deskripsi singkat</label>
+            <textarea class="input" name="mini_body" id="mini_body" rows="2" required>{{ old('mini_body') ?? $post->mini_body }}</textarea>
+        </div>
+        <div class="form-control sm:col-span-2 mt-2">
             <label for="body" class="label">Body</label>
             <div>
                 <textarea name="body" id="body">{!! old('body') ?? $post->body !!}</textarea>

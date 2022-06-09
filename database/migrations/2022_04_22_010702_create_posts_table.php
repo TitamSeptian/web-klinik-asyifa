@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('thumbnail');
             $table->string('cover');
             $table->text('body');
+            $table->text('mini_body');
             $table->enum('status', ['PUBLISHED', 'DRAFT'])->default('DRAFT');
             $table->dateTime('published_at')->nullable();
             $table->unsignedBigInteger('user_id');

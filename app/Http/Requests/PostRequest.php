@@ -26,6 +26,7 @@ class PostRequest extends FormRequest
         $rules['title'] = ['required', 'string', 'max:255'];
         $rules['body'] = ['required', 'string'];
         $rules['tags'] = ['required'];
+        $rules['mini_body'] = ['required', 'string', 'max:255'];
         if ($this->method() == 'POST') {
             $rules['thumbnail'] = ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'];
             $rules['cover'] = ['required', 'image', 'mimes:jpeg,png,jpg,gif,svg', 'max:2048'];

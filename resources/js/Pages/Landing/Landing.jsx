@@ -19,8 +19,17 @@ import Navbar from "../../Components/MainNavbar";
 import { GoLocation } from "react-icons/go";
 import { BiTime, BiPhone } from "react-icons/bi";
 import { FiPhone } from "react-icons/fi";
-import { Head } from "@inertiajs/inertia-react";
-const Landing = () => {
+import { Head, InertiaLink } from "@inertiajs/inertia-react";
+
+const Landing = ({
+    lattestPost,
+    twoLatestPost,
+    reviews,
+    servicesLab,
+    servicesKlinik,
+}) => {
+    lattestPost = lattestPost[0];
+    console.log(lattestPost);
     return (
         <>
             <Head>
@@ -35,16 +44,15 @@ const Landing = () => {
                 <div className="grid  sm:grid-cols-2 grid-cols-1 pt-[150px] gap-3">
                     <div className="container flex flex-col gap-y-3 justify-center">
                         <h1 className="sm:text-6xl text-2xl md:text-3xl font-semibold">
-                            We Are Providing{" "}
+                            Klinik Asyifaa' Mariuk Membangun{" "}
                             <span className="underline underline-offset-2 text-thePrimary ">
-                                Best and Affordable
+                                Keluaga Sehat
                             </span>{" "}
-                            Health Care.
+                            dah Sejahtera
                         </h1>
                         <p className="text-gray-400">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit. Sed dictum venenatis rhoncus. Aliquam dictum
-                            enim quam, vitae commodo odio lobortis a.
+                            Memberikan pelayanan kesehatan bagi seluruh lapisan
+                            masyarakat demi terwujudnya hidup sehat
                         </p>
                         <div className="inline-flex justify-start items-center gap-3">
                             <Button
@@ -99,14 +107,10 @@ const Landing = () => {
                                 </span>
                                 <div className="">
                                     <h1 className="text-xl font-semibold">
-                                        Opening Hours
+                                        Jam Praktek
                                     </h1>
-                                    <p className="font-light">
-                                        Monday - Sunday
-                                    </p>
-                                    <p className="font-light">
-                                        06:00 AM - 09:00 PM
-                                    </p>
+                                    <p className="font-light">Senin - Minggu</p>
+                                    <p className="font-light">06:00 - 21:00</p>
                                 </div>
                             </div>
                             <div className="flex justify-center gap-2">
@@ -122,13 +126,13 @@ const Landing = () => {
                                 </span>
                                 <div className="">
                                     <h1 className="text-xl font-semibold">
-                                        Opening Hours
+                                        Kontak
                                     </h1>
                                     <p className="font-light">
-                                        Monday - Sunday
+                                        klinikasyifamariuk@medical.com
                                     </p>
                                     <p className="font-light">
-                                        06:00 AM - 09:00 PM
+                                        +62 821-1188-8903
                                     </p>
                                 </div>
                             </div>
@@ -148,13 +152,12 @@ const Landing = () => {
                                 </span>
                                 <div className="">
                                     <h1 className="text-xl font-semibold">
-                                        Opening Hours
+                                        Lokasi
                                     </h1>
                                     <p className="font-light">
-                                        Monday - Sunday
-                                    </p>
-                                    <p className="font-light">
-                                        06:00 AM - 09:00 PM
+                                        Jl. Karanganyar No.48, Margaluyu,
+                                        Tanjungsari, Kab. Sumedang, Jawa Barat
+                                        POS 45362
                                     </p>
                                 </div>
                             </div>
@@ -171,8 +174,8 @@ const Landing = () => {
                             className="rounded-full group-hover:bg-gray-100"
                         />
                         <div className="group-hover:bg-gray-100">
-                            <h2 className="font-semibold">Dr. Diandra</h2>
-                            <h2>Eye spesialist</h2>
+                            <h2 className="font-semibold">Dr. Intan</h2>
+                            <h2>Dokter Umum</h2>
                         </div>
                     </a>
                     <a className="lg:w-full lg:h-full w-auto h-auto flex gap-x-2 group hover:bg-gray-100 p-2 rounded-md hover:cursor-pointer">
@@ -182,12 +185,12 @@ const Landing = () => {
                             className="rounded-full group-hover:bg-gray-100"
                         />
                         <div className="group-hover:bg-gray-100">
-                            <h2 className="font-semibold">Dr. diandra</h2>
-                            <h2>Ear spesialist</h2>
+                            <h2 className="font-semibold">Dr. Geri</h2>
+                            <h2>Dokter Umum</h2>
                         </div>
                     </a>
                     <button className="py-2 bg-error-600 rounded-md px-2 text-white mx-auto block">
-                        Find a Doctor
+                        Cari Doctor
                     </button>
                 </div>
             </section>
@@ -195,18 +198,16 @@ const Landing = () => {
                 <div className="grid sm:grid-cols-2 grid-cols-1 gap-4">
                     <div className="">
                         <h1 className="sm:text-6xl font-semibold text-2xl">
-                            The{" "}
-                            <span className="text-thePrimary">
-                                Best Quality
-                            </span>{" "}
-                            Service for You
+                            Memberikan Pelayanan Kesehatan{" "}
+                            <span className="text-thePrimary">Terbaik</span>
                         </h1>
                     </div>
                     <div className="">
                         <p className="lg:px-10">
-                            Curabitur elementum, nunc at faucibus finibus, elit
-                            magna pulvinar metus, a blandit nunc arcu vel
-                            ligula. Fusce in vestibulum sem.
+                            Memberikan pelayanan kesehatan bagi seluruh lapisan
+                            masyarakat demi terwujudnya hidup sehat serta
+                            membina masyarakat dalam usahanya mencapai kesehatan
+                            secara mandiri.
                         </p>
                     </div>
                 </div>
@@ -217,22 +218,11 @@ const Landing = () => {
             >
                 <div className="grid md:grid-cols-2 grid-cols-1">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6">
-                        <ServiceItem title="Patient Safety">
-                            Donec euismod felis ut faucibus pellentesque. Nullam
-                            eu ante nec diam egestas gravida et at lorem.
-                        </ServiceItem>
-                        <ServiceItem title="Free Consultation">
-                            Donec euismod felis ut faucibus pellentesque. Nullam
-                            eu ante nec diam egestas gravida et at lorem.
-                        </ServiceItem>
-                        <ServiceItem title="Patient Safety">
-                            Donec euismod felis ut faucibus pellentesque. Nullam
-                            eu ante nec diam egestas gravida et at lorem.
-                        </ServiceItem>
-                        <ServiceItem title="Free Consultation">
-                            Donec euismod felis ut faucibus pellentesque. Nullam
-                            eu ante nec diam egestas gravida et at lorem.
-                        </ServiceItem>
+                        {servicesKlinik.map((service, index) => (
+                            <ServiceItem title={service.title}>
+                                {service.description}
+                            </ServiceItem>
+                        ))}
                     </div>
                     <div className="">
                         <span className="absolute -z-10 -bottom-96 right-0">
@@ -258,8 +248,8 @@ const Landing = () => {
             </section>
             <section className="h-[456px] w-full bg-[#F9FAFB] px-4 mt-20 flex flex-col justify-center items-center gap-y-5">
                 <h1 className="font-semibold md:text-5xl sm:text-3xl text-2xl text-center">
-                    Nullam eu ante nec diam egestas gravida et at lorem.
-                    Maecenas in suscipit elit, sed ac erat posuere.
+                    “Hal yang paling menyenangkan di tengah masa sulit adalah
+                    kesehatan yang baik dan tidur yang cukup.”
                 </h1>
                 <div className="flex flex-col justify-center items-center gap-y-2">
                     <img src={people} alt="people" className="rounded-full" />
@@ -287,48 +277,11 @@ const Landing = () => {
                     </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
-                    <ServiceItem title="Free Consultation">
-                        Aenean quis malesuada orci. Praesent nisl dui,
-                        sollicitudin et auctor a, lacinia at libero. Nunc mollis
-                        velit metus, ut mollis mauris luctus at. Vivamus sed
-                        dictum ipsum. Curabitur malesuada viverra felis,
-                        convallis ullamcorper nunc auctor tristique.
-                    </ServiceItem>
-                    <ServiceItem title="Free Consultation">
-                        Aenean quis malesuada orci. Praesent nisl dui,
-                        sollicitudin et auctor a, lacinia at libero. Nunc mollis
-                        velit metus, ut mollis mauris luctus at. Vivamus sed
-                        dictum ipsum. Curabitur malesuada viverra felis,
-                        convallis ullamcorper nunc auctor tristique.
-                    </ServiceItem>
-                    <ServiceItem title="Free Consultation">
-                        Aenean quis malesuada orci. Praesent nisl dui,
-                        sollicitudin et auctor a, lacinia at libero. Nunc mollis
-                        velit metus, ut mollis mauris luctus at. Vivamus sed
-                        dictum ipsum. Curabitur malesuada viverra felis,
-                        convallis ullamcorper nunc auctor tristique.
-                    </ServiceItem>
-                    <ServiceItem title="Free Consultation">
-                        Aenean quis malesuada orci. Praesent nisl dui,
-                        sollicitudin et auctor a, lacinia at libero. Nunc mollis
-                        velit metus, ut mollis mauris luctus at. Vivamus sed
-                        dictum ipsum. Curabitur malesuada viverra felis,
-                        convallis ullamcorper nunc auctor tristique.
-                    </ServiceItem>
-                    <ServiceItem title="Free Consultation">
-                        Aenean quis malesuada orci. Praesent nisl dui,
-                        sollicitudin et auctor a, lacinia at libero. Nunc mollis
-                        velit metus, ut mollis mauris luctus at. Vivamus sed
-                        dictum ipsum. Curabitur malesuada viverra felis,
-                        convallis ullamcorper nunc auctor tristique.
-                    </ServiceItem>
-                    <ServiceItem title="Free Consultation">
-                        Aenean quis malesuada orci. Praesent nisl dui,
-                        sollicitudin et auctor a, lacinia at libero. Nunc mollis
-                        velit metus, ut mollis mauris luctus at. Vivamus sed
-                        dictum ipsum. Curabitur malesuada viverra felis,
-                        convallis ullamcorper nunc auctor tristique.
-                    </ServiceItem>
+                    {servicesLab.map((service, index) => (
+                        <ServiceItem title={service.title}>
+                            {service.description}
+                        </ServiceItem>
+                    ))}
                 </div>
             </section>
             <section className="md:px-24 px-4 mt-16">
@@ -400,40 +353,11 @@ const Landing = () => {
                     </p>
                 </div>
                 <div className="flex flex-wrap justify-center gap-6 mt-16">
-                    <RatingItem name="Rezky Finaldi Widihastuti" stars={5}>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Iste, quidem! Laudantium voluptatibus consequatur
-                        nam sint.
-                    </RatingItem>
-                    <RatingItem name="Mirza Fariz Widiyasari" stars={5}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed a quam vel justo semper luctus tempus sit amet
-                        mauris. Morbi orci ligula, fermentum nec diam pharetra,
-                        lobortis vestibulum lorem. Nulla in feugiat dolor.
-                        Integer sit amet massa at ligula tristique dapibus.
-                    </RatingItem>
-                    <RatingItem name="Rifat Mariana" stars={5}>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Iste, quidem! Laudantium voluptatibus consequatur
-                        nam sint.
-                    </RatingItem>
-                    <RatingItem name="Permana Zahra" stars={5}>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed a quam vel justo semper luctus tempus sit amet
-                        mauris. Morbi orci ligula, fermentum nec diam pharetra,
-                        lobortis vestibulum lorem. Nulla in feugiat dolor.
-                        Integer sit amet massa at ligula tristique dapibus.
-                    </RatingItem>
-                    <RatingItem name="Fahdnul Nugraha" stars={4}>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Iste, quidem! Laudantium voluptatibus consequatur
-                        nam sint.
-                    </RatingItem>
-                    <RatingItem name="Humam Wardhani" stars={5}>
-                        Lorem ipsum dolor, sit amet consectetur adipisicing
-                        elit. Iste, quidem! Laudantium voluptatibus consequatur
-                        nam sint.
-                    </RatingItem>
+                    {reviews.map((review, index) => (
+                        <RatingItem name={review.name} stars={review.stars}>
+                            {review.comment}
+                        </RatingItem>
+                    ))}
                 </div>
             </section>
             <section className="md:px-24 px-4 mt-20 pb-20">
@@ -448,94 +372,77 @@ const Landing = () => {
                         mauris. Morbi orci ligula, fermentum nec diam pharetra,
                         lobortis vestibulum lorem.
                     </p>
-                    <div className="p-3 flex justify-center items-center hover:cursor-pointer">
-                        <div className="bg-[#FEF3F2] rounded-full px-4 py-1 text-thePrimary font-semibold flex flex-col sm:block">
-                            <span className="bg-white rounded-full px-3 py-0.5 mr-2 justify-self-center items-center text-center sm:text-left">
-                                New articles
-                            </span>
-                            <span>Check out our latest update</span>
+                    <InertiaLink href={route("articles")}>
+                        <div className="p-3 flex justify-center items-center hover:cursor-pointer">
+                            <div className="bg-[#FEF3F2] rounded-full px-4 py-1 text-thePrimary font-semibold flex flex-col sm:block">
+                                <span className="bg-white rounded-full px-3 py-0.5 mr-2 justify-self-center items-center text-center sm:text-left">
+                                    New articles
+                                </span>
+                                <span>Check out our latest update</span>
+                            </div>
                         </div>
-                    </div>
+                    </InertiaLink>
                 </div>
                 <div className="grid overflow-hidden sm:grid-cols-2 grid-cols-1 sm:grid-rows-2 grid-rows-1 gap-2 mt-10">
                     <div className="sm:row-span-2">
                         <div className="flex flex-col gap-y-5 justify-items-stretch">
                             <div className="rounded-xl">
                                 <img
-                                    src={post1}
+                                    src={lattestPost.thumbnail}
                                     alt="tumbnail post"
                                     className="rounded-xl object-cover w-full"
                                 />
                             </div>
                             <h3 className="text-thePrimary font-semibold text-md">
-                                Olivia Rhye • 20 Jan 2022
+                                {lattestPost.user.name} •{" "}
+                                {lattestPost.published_at}
                             </h3>
-                            <h1 className="text-xl font-semibold">
-                                UX review presentations
-                            </h1>
+                            <InertiaLink href={lattestPost.see_detail}>
+                                <h1 className="text-xl font-semibold hover:underline">
+                                    {lattestPost.title}
+                                </h1>
+                            </InertiaLink>
                             <p className="text-gray-400">
-                                How do you create compelling presentations that
-                                wow your colleagues and impress your managers?
+                                {lattestPost.mini_body} ...
                             </p>
-                            <div className="rounded-full px-3 bg-gray-50 text-gray-500 font-semibold self-start">
-                                Covid-19
-                            </div>
+                            {lattestPost.tags.map((tag) => (
+                                <div className="rounded-full px-3 bg-gray-50 text-gray-500 font-semibold self-start">
+                                    {tag.name}
+                                </div>
+                            ))}
                         </div>
                     </div>
-                    <div className="sm:col-start-2">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                            <div className="rounded-xl">
-                                <img
-                                    src={post2}
-                                    alt="tumbnail post"
-                                    className="rounded-xl object-cover w-full"
-                                />
-                            </div>
-                            <div className="flex flex-col gap-y-5">
-                                <h3 className="text-thePrimary font-semibold text-md">
-                                    Phoenix Baker • 19 Jan 2022
-                                </h3>
-                                <h1 className="text-xl font-semibold">
-                                    Migrating to Linear 101
-                                </h1>
-                                <p className="text-gray-400">
-                                    Linear helps streamline software projects,
-                                    sprints, tasks, and bug tracking. Here’s how
-                                    to get...
-                                </p>
-                                <div className="rounded-full px-3 bg-gray-50 text-gray-500 font-semibold self-start">
-                                    Health Care
+                    {twoLatestPost.map((post) => (
+                        <div className="sm:col-start-2">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                <div className="rounded-xl">
+                                    <img
+                                        src={post.thumbnail}
+                                        alt="tumbnail post"
+                                        className="rounded-xl object-cover w-full"
+                                    />
+                                </div>
+                                <div className="flex flex-col gap-y-5">
+                                    <h3 className="text-thePrimary font-semibold text-md">
+                                        {post.user.name} • {post.published_at}
+                                    </h3>
+                                    <InertiaLink href={post.see_detail}>
+                                        <h1 className="text-xl font-semibold hover:underline">
+                                            {post.title}
+                                        </h1>
+                                    </InertiaLink>
+                                    <p className="text-gray-400">
+                                        {post.mini_body} ...
+                                    </p>
+                                    {post.tags.map((tag) => (
+                                        <div className="rounded-full px-3 bg-gray-50 text-gray-500 font-semibold self-start">
+                                            {tag.name}
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="sm:col-start-2">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                            <div className="rounded-xl">
-                                <img
-                                    src={post3}
-                                    alt="tumbnail post"
-                                    className="rounded-xl object-cover w-full"
-                                />
-                            </div>
-                            <div className="flex flex-col gap-y-5">
-                                <h3 className="text-thePrimary font-semibold text-md">
-                                    Lana Steiner • 18 Jan 2022
-                                </h3>
-                                <h1 className="text-xl font-semibold">
-                                    Building your API Stack
-                                </h1>
-                                <p className="text-gray-400">
-                                    The rise of RESTful APIs has been met by a
-                                    rise in tools for creating, testing, and
-                                    manag...
-                                </p>
-                                <div className="rounded-full px-3 bg-gray-50 text-gray-500 font-semibold self-start">
-                                    Mental Care
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </section>
             <Footer />

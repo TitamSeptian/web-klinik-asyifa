@@ -8,7 +8,6 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 
 /*
