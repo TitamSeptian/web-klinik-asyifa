@@ -29,7 +29,7 @@
                             Dashboard
                         </span>
                         <div class="grid gap-2">
-                            <a href="#"
+                            <a href="{{ route('dashboard') }}"
                                 class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group {{ $activePage == 'dashboard' ? 'bg-gray-100 text-gray-600' : '' }}">
                                 <i
                                     class="text-xl text-gray-400 transition-all duration-300 bx bxs-dashboard group-hover:text-gray-600"></i>

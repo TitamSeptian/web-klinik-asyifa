@@ -9,14 +9,14 @@
         <div class="py-4 px-6 bg-gray-50 rounded-xl">
             <div class="flex items-center gap-4">
                 <div class="h-14 w-14 grid place-items-center rounded-xl bg-gray-800 text-white text-xl">
-                    <i class="bx bx-home-heart"></i>
+                    <i class="bx bx-repost"></i>
                 </div>
                 <div class="flex flex-col">
                     <span class="text-gray-600 text-lg">
-                        The Data
+                        Postingan
                     </span>
                     <span class="text-gray-800 text-2xl font-bold">
-                        14
+                        {{ $posts->count() }}
                     </span>
                 </div>
             </div>
@@ -24,14 +24,14 @@
         <div class="py-4 px-6 bg-gray-50 rounded-xl">
             <div class="flex items-center gap-4">
                 <div class="h-14 w-14 grid place-items-center rounded-xl bg-gray-800 text-white text-xl">
-                    <i class="bx bx-home-smile"></i>
+                    <i class="bx bx-plus-medical"></i>
                 </div>
                 <div class="flex flex-col">
                     <span class="text-gray-600 text-lg">
-                        The Data
+                        Dokter
                     </span>
                     <span class="text-gray-800 text-2xl font-bold">
-                        7
+                        {{ $doctors->count() }}
                     </span>
                 </div>
             </div>
@@ -39,14 +39,14 @@
         <div class="py-4 px-6 bg-gray-50 rounded-xl">
             <div class="flex items-center gap-4">
                 <div class="h-14 w-14 grid place-items-center rounded-xl bg-gray-800 text-white text-xl">
-                    <i class="bx bx-images"></i>
+                    <i class="bx bx-building"></i>
                 </div>
                 <div class="flex flex-col">
                     <span class="text-gray-600 text-lg">
-                        The Data
+                        Pelayanan
                     </span>
                     <span class="text-gray-800 text-2xl font-bold">
-                        13
+                        {{ $services->count() }}
                     </span>
                 </div>
             </div>
