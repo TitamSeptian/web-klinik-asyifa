@@ -1,6 +1,7 @@
 import React from "react";
 import { BiPhone } from "react-icons/bi";
 import logo from "@/src/logo.svg";
+import { InertiaLink } from "@inertiajs/inertia-react";
 
 const Footer = () => {
     return (
@@ -8,20 +9,32 @@ const Footer = () => {
             <div className="flex justify-between sm:flex-nowrap flex-wrap pb-8 gap-3">
                 <img src={logo} alt="logo" />
                 <h1 className="font-semibold w-[272px]">
-                    We Are Providing{" "}
+                    Membangun{" "}
                     <span className="underline underline-offset-2 text-thePrimary">
-                        Best and Affordable
+                        Keluarga Sehat
                     </span>{" "}
-                    Health Care.
+                    dan{" "}
+                    <span className="underline underline-offset-2 text-thePrimary">
+                        Sejahtera
+                    </span>{" "}
+                    dalam Menyukseskan Indonesia Sehat
                 </h1>
             </div>
             <div className="flex justify-between pt-8 sm:flex-nowrap flex-wrap gap-3">
                 <p>&copy; 2022 Klinik Asyifa Mariuk</p>
                 <ul className="flex gap-x-6">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Articles</li>
+                    <li>
+                        <InertiaLink href={route("home")}>Home</InertiaLink>
+                    </li>
+                    <li>
+                        <InertiaLink href={route("about")}>About</InertiaLink>
+                    </li>
+                    {/* <li>Services</li> */}
+                    <li>
+                        <InertiaLink href={route("articles")}>
+                            Articles
+                        </InertiaLink>
+                    </li>
                 </ul>
                 <p className="flex gap-x-2">
                     <BiPhone

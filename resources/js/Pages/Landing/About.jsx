@@ -15,7 +15,7 @@ import img9 from "@/src/about/9.png";
 import img10 from "@/src/about/10.png";
 import { Head } from "@inertiajs/inertia-react";
 
-const About = () => {
+const About = ({ activity }) => {
     return (
         <>
             <Head>
@@ -25,16 +25,17 @@ const About = () => {
             <section className="md:px-24 px-2">
                 <div className="flex flex-col gap-y-10 justify-center items-center">
                     <h1 className="sm:text-6xl text-2xl md:text-3xl text-center font-bold">
-                        Klinik Asyifaa Mariuk Providing{" "}
                         <span className="text-thePrimary underline underline-offset-2">
-                            Best and Affordable
+                            Profil
                         </span>{" "}
-                        Health Care.
+                        Klinik Asyifaa Mariuk
                     </h1>
                     <p className="text-gray-400 text-center w-auto lg:w-[800px]">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed dictum venenatis rhoncus. Aliquam dictum enim quam,
-                        vitae commodo odio lobortis a.
+                        Membangun Keluarga Sehat dan Sejahtera dalam
+                        Mensukseskan Indonesia Sehat. Memberikan pelayanan
+                        kesehatan bagi seluruh lapisan masyarakat demi
+                        terwujudnya hidup sehat serta membina masyarakat dalam
+                        usahanya mencapai kesehatan secara mandiri.
                     </p>
                 </div>
             </section>
@@ -76,45 +77,41 @@ const About = () => {
             </section>
             <section className="md:px-24 px-2 mt-20">
                 <p className="text-gray-400 max-w-[1008px] mx-auto">
-                    Creeping his without wherein fill lesser of you set sea
-                    very. Let saying fly green were without his waters midst
-                    waters over one man the won't one were years earth let.
-                    Don't fruit him won't winged two let seas blessed a man
-                    multiply second waters beast his fruitful likeness and to
-                    earth hath make one there him wherein which image. Called
-                    living female of.
+                    Klinik Asyifaa’ Mariuk didirikan pada tanggal 7 Mei 2012 di
+                    bawah naungan Ar-Razzaaq yang diketuai oleh H. Een Suwarna
+                    dengan Nomor Izin 503.445.5/007/BPMPP/2010. Klinik ini
+                    beralamat di Jalan Cijambu Dusun Mariuk Desa Margaluyu
+                    Kecamatan Tanjungsari Kabupaten Sumedang Provinsi Jawa
+                    Barat. Klinik ini dipimpin oleh dr. A. Geri. Rifa’i.
                 </p>
                 <p className="text-gray-400 max-w-[1008px] mx-auto mt-20">
-                    Creeping his without wherein fill lesser of you set sea
-                    very. Let saying fly green were without his waters midst
-                    waters over one man the won't one were years earth let.
-                    Don't fruit him won't winged two let seas blessed a man
-                    multiply second waters beast his fruitful likeness and to
-                    earth hath make one there him wherein which image. Called
-                    living female of.
+                    Visi dari Klinik Asyifaa’ Mariuk adalah “Membangun Keluarga
+                    Sehat dan Sejahtera dalam Menyukseskan Indonesia Sehat”.
+                    Misi dari Klinik Asyifaa’ Mariuk adalah “Memberikan
+                    pelayanan kesehatan bagi seluruh lapisan masyarakat demi
+                    terwujudnya kualitas hidup sehat serta membina masyarakat
+                    dalam usahanya mencapai kesehatan secara mandiri”
                 </p>
             </section>
             <section className="md:px-24 px-2 mt-20 bg-gray-50">
                 <div className="flex flex-wrap py-10">
                     <div className="md:w-1/2 w-full flex flex-col gap-y-6 order-2 md:order-1">
                         <h1 className="sm:text-6xl text-2xl md:text-3xl font-bold mt-4 md:mt-0">
-                            <span className="text-thePrimary">
-                                Best and Affordable
-                            </span>{" "}
-                            Health Care.
+                            <span className="text-thePrimary">Tujuan</span>{" "}
+                            Klinik Asyifaa’ Mariuk
                         </h1>
-                        <p className="text-gray-400">
-                            Creeping his without wherein fill lesser of you set
-                            sea very. Let saying fly green were without his
-                            waters midst waters over one man the won't one were
-                            years earth let.
-                        </p>
-                        <p className="text-gray-400">
-                            Don't fruit him won't winged two let seas blessed a
-                            man multiply second waters beast his fruitful
-                            likeness and to earth hath make one there him
-                            wherein which image.
-                        </p>
+                        <ol className="list-decimal list-inside text-md">
+                            <li>
+                                Memberikan pelayanan bagi masyarakat terutama
+                                dalam hal pengobatan
+                            </li>
+                            <li>Be Islamic Medical Provider</li>
+                            <li>Community Oriented</li>
+                            <li>Profit and Charity</li>
+                            <li>Medical Research Center</li>
+                            <li>Science and Skill Development</li>
+                            <li>Effective, Efficient, and Professional</li>
+                        </ol>
                     </div>
                     <div className="md:w-1/2 w-full flex justify-center items-center order-1 md:order-2">
                         <div className="flex flex-row justify-between max-w-md gap-2">
@@ -131,24 +128,6 @@ const About = () => {
                                 />
                             </div>
                         </div>
-                        {/* <div className="grid overflow-hidden grid-lines grid-cols-2 grid-rows-2 gap-2">
-                            <div className="bg-sky-500">
-                                <img src={img7} alt="" className="rounded-lg" />
-                            </div>
-                            <div className="bg-sky-500 row-span-2 place-self-center">
-                                <img src={img8} alt="" className="rounded-lg" />
-                            </div>
-                            <div className="bg-sky-500 row-span-2">
-                                <img src={img9} alt="" className="rounded-lg" />
-                            </div>
-                            <div className="bg-sky-500">
-                                <img
-                                    src={img10}
-                                    alt=""
-                                    className="rounded-lg place-self-start"
-                                />
-                            </div>
-                        </div> */}
                     </div>
                 </div>
             </section>
@@ -156,70 +135,28 @@ const About = () => {
                 <div className="grid sm:grid-cols-3 grid-cols-1 gap-3">
                     <div className="col-span-2">
                         <h1 className="sm:text-6xl text-2xl font-semibold">
-                            <span className="text-thePrimary">
-                                {" "}
-                                We're Providing{" "}
-                            </span>
-                            Multiple Medical Specialities
+                            <span className="text-thePrimary">Kegiatan</span>
+                            yang Dilaksanakan di Klinik Asyifaa’ Mariuk
                         </h1>
                     </div>
                     <div className="">
                         <p className="md:px-10 px-2">
-                            Curabitur elementum, nunc at faucibus finibus, elit
-                            magna pulvinar metus, a blandit nunc arcu vel
-                            ligula. Fusce in vestibulum sem.
+                            Kegiatan yang dilaksanakan ini tentunya memiliki
+                            tujuan-tujuan tertentu dan memberikan hasil yang
+                            positif.
                         </p>
                     </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
-                    <ServiceItem title="Free Consultation">
-                        Aenean quis malesuada orci. Praesent nisl dui,
-                        sollicitudin et auctor a, lacinia at libero. Nunc mollis
-                        velit metus, ut mollis mauris luctus at. Vivamus sed
-                        dictum ipsum. Curabitur malesuada viverra felis,
-                        convallis ullamcorper nunc auctor tristique.
-                    </ServiceItem>
-                    <ServiceItem title="Free Consultation">
-                        Aenean quis malesuada orci. Praesent nisl dui,
-                        sollicitudin et auctor a, lacinia at libero. Nunc mollis
-                        velit metus, ut mollis mauris luctus at. Vivamus sed
-                        dictum ipsum. Curabitur malesuada viverra felis,
-                        convallis ullamcorper nunc auctor tristique.
-                    </ServiceItem>
-                    <ServiceItem title="Free Consultation">
-                        Aenean quis malesuada orci. Praesent nisl dui,
-                        sollicitudin et auctor a, lacinia at libero. Nunc mollis
-                        velit metus, ut mollis mauris luctus at. Vivamus sed
-                        dictum ipsum. Curabitur malesuada viverra felis,
-                        convallis ullamcorper nunc auctor tristique.
-                    </ServiceItem>
-                    <ServiceItem title="Free Consultation">
-                        Aenean quis malesuada orci. Praesent nisl dui,
-                        sollicitudin et auctor a, lacinia at libero. Nunc mollis
-                        velit metus, ut mollis mauris luctus at. Vivamus sed
-                        dictum ipsum. Curabitur malesuada viverra felis,
-                        convallis ullamcorper nunc auctor tristique.
-                    </ServiceItem>
-                    <ServiceItem title="Free Consultation">
-                        Aenean quis malesuada orci. Praesent nisl dui,
-                        sollicitudin et auctor a, lacinia at libero. Nunc mollis
-                        velit metus, ut mollis mauris luctus at. Vivamus sed
-                        dictum ipsum. Curabitur malesuada viverra felis,
-                        convallis ullamcorper nunc auctor tristique.
-                    </ServiceItem>
-                    <ServiceItem title="Free Consultation">
-                        Aenean quis malesuada orci. Praesent nisl dui,
-                        sollicitudin et auctor a, lacinia at libero. Nunc mollis
-                        velit metus, ut mollis mauris luctus at. Vivamus sed
-                        dictum ipsum. Curabitur malesuada viverra felis,
-                        convallis ullamcorper nunc auctor tristique.
-                    </ServiceItem>
+                    {activity.map((item, index) => (
+                        <ServiceItem title={item.name}>{item.desc}</ServiceItem>
+                    ))}
                 </div>
             </section>
             <section className="h-[456px] w-full bg-[#F9FAFB] px-4 mt-20 flex flex-col justify-center items-center gap-y-5">
                 <h1 className="font-semibold md:text-5xl sm:text-3xl text-2xl text-center">
-                    Nullam eu ante nec diam egestas gravida et at lorem.
-                    Maecenas in suscipit elit, sed ac erat posuere.
+                    "Hal yang paling menyenangkan di tengah masa sulit adalah
+                    kesehatan yang baik dan tidur yang cukup."
                 </h1>
                 <div className="flex flex-col justify-center items-center gap-y-2">
                     <img src={people} alt="people" className="rounded-full" />

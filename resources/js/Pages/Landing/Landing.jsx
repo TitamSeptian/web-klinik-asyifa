@@ -27,6 +27,7 @@ const Landing = ({
     reviews,
     servicesLab,
     servicesKlinik,
+    doctors,
 }) => {
     lattestPost = lattestPost[0];
     console.log(lattestPost);
@@ -55,7 +56,7 @@ const Landing = ({
                             masyarakat demi terwujudnya hidup sehat
                         </p>
                         <div className="inline-flex justify-start items-center gap-3">
-                            <Button
+                            {/* <Button
                                 variant="primary"
                                 type="submit"
                                 icon={<BiTime />}
@@ -69,7 +70,7 @@ const Landing = ({
                                 moreClassName="ml-2"
                             >
                                 Secondary
-                            </Button>
+                            </Button> */}
                         </div>
                     </div>
                     <div className="container">
@@ -262,17 +263,15 @@ const Landing = ({
                     <div className="col-span-2">
                         <h1 className="sm:text-6xl text-2xl font-semibold">
                             <span className="text-thePrimary">
-                                {" "}
-                                We're Providing{" "}
+                                Kami Memiliki
                             </span>
-                            Multiple Medical Specialities
+                            Berbagai Macam Fasilitas
                         </h1>
                     </div>
                     <div className="">
                         <p className="md:px-10 px-2">
-                            Curabitur elementum, nunc at faucibus finibus, elit
-                            magna pulvinar metus, a blandit nunc arcu vel
-                            ligula. Fusce in vestibulum sem.
+                            Fasilitas-fasilitas ini tentunya didukung oleh
+                            berbagai macam peralatan mumpuni
                         </p>
                     </div>
                 </div>
@@ -287,55 +286,33 @@ const Landing = ({
             <section className="md:px-24 px-4 mt-16">
                 <div className="flex flex-col justify-center items-center gap-6">
                     <h1 className="sm:text-6xl md:text-4xl text-2xl font-semibold">
-                        Meet Our <span className="text-thePrimary">Expert</span>{" "}
-                        Specialists
+                        Temui Dekter-Dokter
+                        <span className="text-thePrimary"> Terbaik</span> Kami
                     </h1>
-                    <p className="text-gray-400 md:px-10 px-2 sm:text-left text-center">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed a quam vel justo semper luctus tempus sit amet
-                        mauris. Morbi orci ligula, fermentum nec diam pharetra,
-                        lobortis vestibulum lorem.
+                    <p className="text-gray-400 md:px-10 px-2 text-left sm:text-center">
+                        Dokter-dokter yang bekerja di Klinik Asyifaa Mariuk
+                        tentunya merupakan orang-orang yang ahli di bidangnya
+                        dan memiliki spesialisasi terkait. Kami akan mengabdi
+                        dan melayani dengan sepenuh hati
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-20">
-                        <div className="flex flex-col  rounded-2xl w-full justify-end items-center">
-                            <img
-                                src={diandra}
-                                alt="doctor"
-                                className="object-fit h-auto"
-                            />
-                            <div className="flex flex-col text-white rounded-2xl bg-thePrimary gap-2 p-4 w-full">
-                                <h1 className="font-semibold">
-                                    Diandra Wulandari
-                                </h1>
-                                <p className="font-light">Dermatologists</p>
+                        {doctors.map((item, index) => (
+                            <div className="flex flex-col  rounded-2xl w-full justify-end items-center">
+                                <img
+                                    src={item.path_image}
+                                    alt="doctor"
+                                    className="object-fit h-auto"
+                                />
+                                <div className="flex flex-col text-white rounded-2xl bg-thePrimary gap-2 p-4 w-full">
+                                    <h1 className="font-semibold">
+                                        {item.name}
+                                    </h1>
+                                    <p className="font-light">
+                                        {item.specialist}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="flex flex-col  rounded-2xl w-full justify-end items-center">
-                            <img
-                                src={kanda}
-                                alt="doctor"
-                                className="object-fit h-auto"
-                            />
-                            <div className="flex flex-col text-white rounded-2xl bg-thePrimary gap-2 p-4 w-full">
-                                <h1 className="font-semibold">
-                                    Kanda Wulandari
-                                </h1>
-                                <p className="font-light">Dermatologists</p>
-                            </div>
-                        </div>
-                        <div className="flex flex-col  rounded-2xl w-full justify-end items-center">
-                            <img
-                                src={bagus}
-                                alt="doctor"
-                                className="object-fit h-auto"
-                            />
-                            <div className="flex flex-col text-white rounded-2xl bg-thePrimary gap-2 p-4 w-full">
-                                <h1 className="font-semibold">
-                                    Bagus Wulandari
-                                </h1>
-                                <p className="font-light">Dermatologists</p>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -363,19 +340,17 @@ const Landing = ({
             <section className="md:px-24 px-4 mt-20 pb-20">
                 <div className="flex flex-col justify-center items-center gap-6">
                     <h1 className="md:text-6xl sm:text-3xl text-2xl font-semibold">
-                        Read Our <span className="text-thePrimary">Latest</span>{" "}
-                        News!
+                        Baca Berita Artikel
+                        <span className="text-thePrimary"> Terkini</span>
                     </h1>
                     <p className="text-gray-400 px-10 text-center">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Sed a quam vel justo semper luctus tempus sit amet
-                        mauris. Morbi orci ligula, fermentum nec diam pharetra,
-                        lobortis vestibulum lorem.
+                        Artikel-artikel yang dikemas untuk memberi pengetahuan
+                        kepada anda
                     </p>
                     <InertiaLink href={route("articles")}>
                         <div className="p-3 flex justify-center items-center hover:cursor-pointer">
                             <div className="bg-[#FEF3F2] rounded-full px-4 py-1 text-thePrimary font-semibold flex flex-col sm:block">
-                                <span className="bg-white rounded-full px-3 py-0.5 mr-2 justify-self-center items-center text-center sm:text-left">
+                                <span className="bg-white rounded-full px-3 py-0.5 mr-2 justify-self-center items-center text-center sm:text-left animate-pulse">
                                     New articles
                                 </span>
                                 <span>Check out our latest update</span>
@@ -405,44 +380,54 @@ const Landing = ({
                             <p className="text-gray-400">
                                 {lattestPost.mini_body} ...
                             </p>
-                            {lattestPost.tags.map((tag) => (
-                                <div className="rounded-full px-3 bg-gray-50 text-gray-500 font-semibold self-start">
-                                    {tag.name}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                    {twoLatestPost.map((post) => (
-                        <div className="sm:col-start-2">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                                <div className="rounded-xl">
-                                    <img
-                                        src={post.thumbnail}
-                                        alt="tumbnail post"
-                                        className="rounded-xl object-cover w-full"
-                                    />
-                                </div>
-                                <div className="flex flex-col gap-y-5">
-                                    <h3 className="text-thePrimary font-semibold text-md">
-                                        {post.user.name} • {post.published_at}
-                                    </h3>
-                                    <InertiaLink href={post.see_detail}>
-                                        <h1 className="text-xl font-semibold hover:underline">
-                                            {post.title}
-                                        </h1>
-                                    </InertiaLink>
-                                    <p className="text-gray-400">
-                                        {post.mini_body} ...
-                                    </p>
-                                    {post.tags.map((tag) => (
-                                        <div className="rounded-full px-3 bg-gray-50 text-gray-500 font-semibold self-start">
-                                            {tag.name}
-                                        </div>
-                                    ))}
-                                </div>
+                            <div className="flex flex-wrap justify-start items-start space-x-3">
+                                {lattestPost.tags.map((tag) => (
+                                    <div className="rounded-full px-3 bg-gray-50 text-gray-500 font-semibold self-start">
+                                        {tag.tag.name}
+                                    </div>
+                                ))}
                             </div>
                         </div>
-                    ))}
+                    </div>
+                    {twoLatestPost.map((post, index) => {
+                        console.log(index);
+                        if (index != 0) {
+                            return (
+                                <div className="sm:col-start-2">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                                        <div className="rounded-xl">
+                                            <img
+                                                src={post.thumbnail}
+                                                alt="tumbnail post"
+                                                className="rounded-xl object-cover w-full"
+                                            />
+                                        </div>
+                                        <div className="flex flex-col gap-y-5">
+                                            <h3 className="text-thePrimary font-semibold text-md">
+                                                {post.user.name} •{" "}
+                                                {post.published_at}
+                                            </h3>
+                                            <InertiaLink href={post.see_detail}>
+                                                <h1 className="text-xl font-semibold hover:underline">
+                                                    {post.title}
+                                                </h1>
+                                            </InertiaLink>
+                                            <p className="text-gray-400">
+                                                {post.mini_body} ...
+                                            </p>
+                                            <div className="flex flex-wrap justify-start items-start space-x-3">
+                                                {post.tags.map((tag) => (
+                                                    <div className="rounded-full px-3 bg-gray-50 text-gray-500 font-semibold self-start">
+                                                        {tag.tag.name}
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        }
+                    })}
                 </div>
             </section>
             <Footer />

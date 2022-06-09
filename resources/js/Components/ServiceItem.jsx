@@ -30,7 +30,12 @@ const ServiceItem = ({ children, title }) => {
                 </svg>
             </span>
             <h1 className="font-semibold text-xl">{title}</h1>
-            <p className="text-gray-400 text-md">{children}</p>
+            <p
+                className="text-gray-400 text-md"
+                dangerouslySetInnerHTML={{
+                    __html: children,
+                }}
+            ></p>
             <a href="#" className="flex text-thePrimary">
                 <span>Learn More</span>
                 <FaArrowRight

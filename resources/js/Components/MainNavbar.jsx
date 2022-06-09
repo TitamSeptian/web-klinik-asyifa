@@ -31,15 +31,15 @@ const MainNavbar = ({ justSticky }) => {
                 </div>
                 <div className="hidden py-5 absolute lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full z-[99999]">
                     <ul className="block sm:flex font-semibold gap-5">
-                        <li>
+                        <li className="hover:underline">
                             <InertiaLink href={route("home")}>Home</InertiaLink>
                         </li>
-                        <li>
+                        <li className="hover:underline">
                             <InertiaLink href={route("about")}>
                                 About
                             </InertiaLink>
                         </li>
-                        <li>
+                        {/* <li>
                             <InertiaLink href="/">
                                 Services{" "}
                                 <FaAngleDown
@@ -50,8 +50,8 @@ const MainNavbar = ({ justSticky }) => {
                                     }}
                                 />{" "}
                             </InertiaLink>
-                        </li>
-                        <li>
+                        </li> */}
+                        <li className="hover:underline">
                             <InertiaLink href={route("articles")}>
                                 Articles
                             </InertiaLink>
