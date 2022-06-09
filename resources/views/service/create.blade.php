@@ -2,7 +2,7 @@
 @section('content')
     <h1
         class="text-gray-800 text-3xl font-black capitalize after:content-[''] after:block after:w-10 after:h-1 after:bg-gray-800 after:rounded-full">
-        Serives
+        Services
     </h1>
     <a href="{{ route('service.index') }}" class="btn btn-sm mb-4 my-4"><i class='bx bx-arrow-back'></i> Kembali</a>
     <form action="{{ route('service.store') }}" method="post">
