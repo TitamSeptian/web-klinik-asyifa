@@ -117,17 +117,6 @@
                             Account
                         </span>
                         <div class="grid gap-2">
-                            <a href="/views/user/index.php"
-                                class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group">
-                                <i
-                                    class="text-xl text-gray-400 transition-all duration-300 bx bx-cog group-hover:text-gray-600"></i>
-                                <span
-                                    class="font-semibold text-gray-400 transition-all duration-300 group-hover:text-gray-600">
-                                    Profile
-                                </span>
-                            </a>
-                        </div>
-                        <div class="grid gap-2">
                             <a href="javascript:void(0)" id="btn-logout"
                                 class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group">
                                 <i
