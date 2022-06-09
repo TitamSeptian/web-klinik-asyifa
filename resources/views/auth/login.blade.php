@@ -31,7 +31,7 @@
                             <span class="text-red-500 text-sm">{{ $message }}</span>
                         @enderror
                         <button class="block w-full text-center text-white bg-error-600 py-2 rounded-lg">Login</button>
-                        <a href="{{ route('register') }}" class="text-blue-700 justify-self-end">Register</a>
+                        {{-- <a href="{{ route('register') }}" class="text-blue-700 justify-self-end">Register</a> --}}
                     </div>
                 </form>
             </div>

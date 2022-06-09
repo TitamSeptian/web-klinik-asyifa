@@ -24,10 +24,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LandingController::class, 'home'])->name('home');;
 Route::get('/about', [LandingController::class, 'about'])->name('about');
-
 Route::get('/articles', [LandingController::class, 'articles'])->name('articles');
-
 Route::get('/{slug}/blog', [LandingController::class, 'blog'])->name('blog');
+Route::get('gallery', [LandingController::class, 'gallery'])->name('gallery');
 
 // Route::get('/dashboard', function () {
 //     return Inertia::render('Dashboard/Dashboard');

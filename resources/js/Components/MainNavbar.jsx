@@ -56,6 +56,11 @@ const MainNavbar = ({ justSticky }) => {
                                 Articles
                             </InertiaLink>
                         </li>
+                        <li className="hover:underline">
+                            <InertiaLink href={route("gallery")}>
+                                Gallery
+                            </InertiaLink>
+                        </li>
                     </ul>
                 </div>
                 <Button

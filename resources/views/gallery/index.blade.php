@@ -1,4 +1,4 @@
-@extends('partials.master', ['title' => 'Gellery', 'activePage' => 'gallery'])
+@extends('partials.master', ['title' => 'Gallery', 'activePage' => 'gallery'])
 
 @push('css')
     <link rel="stylesheet" type="text/css" href="{{ asset('vendor/dataTables/jquery.dataTables.css') }}">

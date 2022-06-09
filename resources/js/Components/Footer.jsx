@@ -35,6 +35,11 @@ const Footer = () => {
                             Articles
                         </InertiaLink>
                     </li>
+                    <li>
+                        <InertiaLink href={route("gallery")}>
+                            Gallery
+                        </InertiaLink>
+                    </li>
                 </ul>
                 <p className="flex gap-x-2">
                     <BiPhone

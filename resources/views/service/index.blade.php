@@ -120,8 +120,8 @@
                         <td class="td">
                             {{ $service->title }}
                         </td>
-                        <td class="td font-medium text-gray-900">
-                            <article class="prose">{!! $service->description !!}</article>
+                        <td class="td font-sm text-gray-900">
+                            {!! $service->description !!}
                         </td>
                         <td class="td font-medium text-gray-900">{{ $service->type }}</td>
                         <td class="td flex space-x-2 justify-end">

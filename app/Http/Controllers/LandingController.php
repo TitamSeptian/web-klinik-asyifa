@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Doctor;
+use App\Models\Gallery;
 use App\Models\Post;
 use App\Models\Service;
 use App\Models\TagPost;
@@ -203,6 +204,17 @@ class LandingController extends Controller
 
         return Inertia::render('Landing/Articles', [
             'post' => $post
+        ]);
+    }
+
+    public function gallery()
+    {
+        $galleries = Gallery::all()->each(function ($gallery) {
+            $gallery->path_image = Storage::url($gallery->path_image);
+            $gallery->see_detail = URL::route('gallery', $gallery->slug);
+        });
+        return Inertia::render('Landing/Gallery', [
+            'galleries' => $galleries
         ]);
     }
 }
